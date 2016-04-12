@@ -1,6 +1,5 @@
 <?php
 
-$page_name = "Merit Badges";
 
 //Start Inclusion of basic HTML5 content
 include("../../include/header_4.inc");

@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Events";
-
 //include permission fetching code
 include("../include/permissions.inc");
 

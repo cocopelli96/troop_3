@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Articles";
-
 //Start Inclusion of basic HTML5 content
 include("../include/header_3.inc");
 

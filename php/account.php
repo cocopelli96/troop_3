@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Account";
-
 //include permission fetching code
 include("../include/permissions.inc");
 

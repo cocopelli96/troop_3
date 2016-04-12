@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Home";
-
 //Start Inclusion of basic HTML5 content
 include("./include/header_1.inc");
 

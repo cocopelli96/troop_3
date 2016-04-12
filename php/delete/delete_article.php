@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Articles";
-
 //Start Inclusion of basic HTML5 content
 include("../../include/header_4.inc");
 
@@ -62,54 +60,7 @@ if ($uploadOk == 0) {
 			}
 		}
 		$conn->close();
- 
-//         //delete file path in articles.txt
-//         $count = 0;
-//         $file_row = 0;
-//         $articles = fopen("../files/articles.txt", "r") or die("Unable to open file!");
-//         while (!feof($articles))
-//         {
-// 			$line = fgets($articles);
-// 			$count++;
-// 			if ($line != $target_file."\n" && $line != $target_file && !($line == "" || $line == " " || $line == "\n"))
-// 			{
-// 				$text_holder = $text_holder . $line;
-// 			}
-// 			else if (!($line == "" || $line == " " || $line == "\n"))
-// 			{
-// 				$file_row = $count;
-// 			}
-// 		}
-// 		if (substr($text_holder, strlen($text_holder)-1, strlen($text_holder)) == "\n")
-// 		{
-// 			$text_holder = substr($text_holder, 0, strlen($text_holder) - 1);
-// 		}
-//         fclose($articles);
-//         $articles = fopen("../files/articles.txt", "w") or die("Unable to open file!");
-//         fwrite($articles, $text_holder);
-//         fclose($articles);
-//         
-//         //delete article title in titles.txt
-//         $count = 0;
-//         $text_holder= "";
-//         $titles = fopen("../files/titles.txt", "r") or die("Unable to open file!");
-//         while (!feof($titles))
-//         {
-// 			$line = fgets($titles);
-// 			$count++;
-// 			if ($count != $file_row && !($line == "" || $line == " " || $line == "\n"))
-// 			{
-// 				$text_holder = $text_holder . $line;
-// 			}
-// 		}
-// 		if (substr($text_holder, strlen($text_holder)-1, strlen($text_holder)) == "\n")
-// 		{
-// 			$text_holder = substr($text_holder, 0, strlen($text_holder) - 1);
-// 		}
-//         fclose($titles);
-//         $titles = fopen("../files/titles.txt", "w") or die("Unable to open file!");
-//         fwrite($titles, $text_holder);
-//         fclose($titles);
+
     } else {
         echo "Sorry, there was an error deleting your file.";
     }

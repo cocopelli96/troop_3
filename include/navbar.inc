@@ -2,10 +2,8 @@
 
 echo "
 <div id='navbar'>
-	<a href='#' id='mobile_head' onclick='displayMenu(\"mobile_nav\");'>$page_name</a>
-	<div id='mobile_nav'>
-		<a href='index.php'>Home</a>
-		<a href='./php/about.php'>About Us</a>";
+	<a href='index.php'>Home</a>
+	<a href='./php/about.php'>About Us</a>";
 
 if (!isset($_COOKIE["username"]))
 {
@@ -39,10 +37,9 @@ else
 }
 
 echo "
-		<a href='./php/downloads.php'>Downloads</a>
-		<a href='./php/links.php'>Links</a>
-		<a id='tail_link' href='./php/contact.php'>Contact Us</a>
-	</div>
+	<a href='./php/downloads.php'>Downloads</a>
+	<a href='./php/links.php'>Links</a>
+	<a id='tail_link' href='./php/contact.php'>Contact Us</a>
 </div>
 ";
 

@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Login";
-
 // Create connection to database
 // code setup borrowed from w3school.com
 $conn = new mysqli("localhost", "root", "root", "userdb");

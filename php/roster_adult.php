@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Roster";
-
 //include permission fetching code
 include("../include/permissions.inc");
 

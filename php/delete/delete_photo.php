@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Photos";
-
 //Start Inclusion of basic HTML5 content
 include("../../include/header_4.inc");
 
@@ -62,25 +60,7 @@ if ($uploadOk == 0) {
 			}
 		}
 		$conn->close();
-		
-//         //delete file path in gallery.txt
-//         $gallery = fopen("../files/gallery.txt", "r") or die("Unable to open file!");
-//         while (!feof($gallery))
-//         {
-// 			$line = fgets($gallery);
-// 			if ($line != $target_file."\n" && $line != $target_file)
-// 			{
-// 				$text_holder = $text_holder . $line;
-// 			}
-// 		}
-// 		if (substr($text_holder, strlen($text_holder)-1, strlen($text_holder)) == "\n")
-// 		{
-// 			$text_holder = substr($text_holder, 0, strlen($text_holder) - 1);
-// 		}
-//         fclose($gallery);
-//         $gallery = fopen("../files/gallery.txt", "w") or die("Unable to open file!");
-//         fwrite($gallery, $text_holder);
-//         fclose($gallery);
+
     } else {
         echo "Sorry, there was an error deleting your file.";
     }

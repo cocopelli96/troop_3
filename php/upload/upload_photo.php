@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Photos";
-
 //Start Inclusion of basic HTML5 content
 include("../../include/header_4.inc");
 
@@ -88,22 +86,6 @@ if ($uploadOk == 0) {
 		}
 		$conn->close();
 		
-       //  //record file path in gallery.txt
-//         $gallery = fopen("../files/gallery.txt", "r") or die("Unable to open file!");
-//         $first_line = fgets($gallery);
-//         fclose($gallery);
-//         if ($first_line == "" || $first_line == " " || $first_line == "\n")
-//         {
-//         	$gallery = fopen("../files/gallery.txt", "w") or die("Unable to open file!");
-//         	fwrite($gallery, $target_dir . basename( $_FILES["fileToUpload"]["name"]));
-//         	fclose($gallery);
-//         }
-//         else
-//         {
-//         	$gallery = fopen("../files/gallery.txt", "a") or die("Unable to open file!");
-//         	fwrite($gallery, "\n" . $target_dir . basename( $_FILES["fileToUpload"]["name"]));
-//         	fclose($gallery);
-//         }
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

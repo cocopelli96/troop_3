@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Logout";
-
 setcookie("username", "", time() - 3300, "/");
 
 //Start Inclusion of basic HTML5 content

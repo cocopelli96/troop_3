@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Photos";
-
 // Include database permissions
 include("../include/permissions.inc");
 

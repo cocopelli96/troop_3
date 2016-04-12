@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Merit Badges";
-
 //include permission fetching code
 include("../include/permissions.inc");
 

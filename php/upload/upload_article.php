@@ -1,7 +1,5 @@
 <?php
 
-$page_name = "Articles";
-
 //Start Inclusion of basic HTML5 content
 include("../../include/header_4.inc");
 
@@ -88,40 +86,7 @@ if ($uploadOk == 0) {
 			$result = $conn->query($sql);
 		}
 		$conn->close();
-		
-//         //record file path in articles.txt
-//         $articles = fopen("../files/articles.txt", "r") or die("Unable to open file!");
-//         $first_line = fgets($articles);
-//         fclose($articles);
-//         if ($first_line == "" || $first_line == " " || $first_line == "\n")
-//         {
-//         	$articles = fopen("../files/articles.txt", "w") or die("Unable to open file!");
-//         	fwrite($articles, $target_dir . basename( $_FILES["fileToUpload"]["name"]));
-//         	fclose($articles);
-//         }
-//         else
-//         {
-//         	$articles = fopen("../files/articles.txt", "a") or die("Unable to open file!");
-//         	fwrite($articles, "\n" . $target_dir . basename( $_FILES["fileToUpload"]["name"]));
-//         	fclose($articles);
-//         }
-//         
-//         //record article title in titles.txt
-//         $titles = fopen("../files/titles.txt", "r") or die("Unable to open file!");
-//         $first_line = fgets($titles);
-//         fclose($titles);
-//         if ($first_line == "" || $first_line == " " || $first_line == "\n")
-//         {
-//         	$titles = fopen("../files/titles.txt", "w") or die("Unable to open file!");
-//         	fwrite($titles, $article_title);
-//         	fclose($titles);
-//         }
-//         else
-//         {
-//         	$titles = fopen("../files/titles.txt", "a") or die("Unable to open file!");
-//         	fwrite($titles, "\n" . $article_title);
-//         	fclose($titles);
-//         }
+	
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
