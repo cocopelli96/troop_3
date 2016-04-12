@@ -29,7 +29,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM event;";
+	$sql = "SELECT * FROM Event;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -91,7 +91,7 @@ else
 				<td>
 					<input type='textbox' name='deadline' id='deadline' ";
 	
-		$sql1 = "SELECT * FROM signup WHERE event_id = ".$row["event_id"];
+		$sql1 = "SELECT * FROM SignUp WHERE event_id = ".$row["event_id"];
 		$result1 = $conn->query($sql1);
 
 		if ($result1->num_rows > 0) {
@@ -111,7 +111,7 @@ else
 				<td>
 					<input type='textbox' name='cost' id='cost' ";
 	
-		$sql1 = "SELECT * FROM signup WHERE event_id = ".$row["event_id"];
+		$sql1 = "SELECT * FROM SignUp WHERE event_id = ".$row["event_id"];
 		$result1 = $conn->query($sql1);
 
 		if ($result1->num_rows > 0) {

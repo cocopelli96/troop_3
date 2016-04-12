@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM event;";
+	$sql = "SELECT * FROM Event;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -34,7 +34,7 @@ else
 		while($row = $result->fetch_assoc()) {
 			if ($row["event_id"] == $_POST["event_id"])
 			{
-				$sql1 = "SELECT * FROM attendant;";
+				$sql1 = "SELECT * FROM Attendant;";
 				$result1 = $conn->query($sql1);
 
 				$attendants = 0;
@@ -54,7 +54,7 @@ else
 				}
 				else
 				{
-					$sql1 = "SELECT * FROM signup;";
+					$sql1 = "SELECT * FROM SignUp;";
 					$result1 = $conn->query($sql1);
 
 					if ($result1->num_rows > 0) {
@@ -62,7 +62,7 @@ else
 						while($row1 = $result1->fetch_assoc()) {
 							if ($row1["event_id"] == $row["event_id"])
 							{
-								$sql2 = "DELETE FROM signup WHERE event_id = ".$row["event_id"];
+								$sql2 = "DELETE FROM SignUp WHERE event_id = ".$row["event_id"];
 								$result2 = $conn->query($sql2);
 								echo "Signup deleted.";
 								break;
@@ -70,7 +70,7 @@ else
 						}		
 					}
 				
-					$sql1 = "DELETE FROM event WHERE event_id = ".$row["event_id"];
+					$sql1 = "DELETE FROM Event WHERE event_id = ".$row["event_id"];
 					$result1 = $conn->query($sql1);
 					echo "Event deleted.";
 					break;

@@ -11,7 +11,7 @@ else
 {
 	if(isset($_COOKIE["username"]))
 	{
-		$sql = "SELECT uid, uname, pass, perm_id FROM useraccount";
+		$sql = "SELECT uid, uname, pass, perm_id FROM UserAccount";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
@@ -25,7 +25,7 @@ else
 			}
 		}
 	
-		$sql = "SELECT perm_id, perm_title, perm_level FROM permission";
+		$sql = "SELECT perm_id, perm_title, perm_level FROM Permission";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {

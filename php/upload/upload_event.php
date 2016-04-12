@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM event ORDER BY event_id;";
+	$sql = "SELECT * FROM Event ORDER BY event_id;";
 	$result = $conn->query($sql);
 
 	$event_id = 1;
@@ -41,14 +41,14 @@ else
 		}
 	}
 
-	$sql = "INSERT INTO event VALUES(".$event_id.",'".$_POST["event_name"]."','".$_POST["description"]."','".$_POST["location"]."','".substr($_POST["start"],6,4)."-".substr($_POST["start"],0,2)."-".substr($_POST["start"],3,2)." ".substr($_POST["start"],11,8)."','".substr($_POST["end"],6,4). "-".substr($_POST["end"],0,2)."-".substr($_POST["end"],3,2)." " .substr($_POST["end"],11,8)."')";
+	$sql = "INSERT INTO Event VALUES(".$event_id.",'".$_POST["event_name"]."','".$_POST["description"]."','".$_POST["location"]."','".substr($_POST["start"],6,4)."-".substr($_POST["start"],0,2)."-".substr($_POST["start"],3,2)." ".substr($_POST["start"],11,8)."','".substr($_POST["end"],6,4). "-".substr($_POST["end"],0,2)."-".substr($_POST["end"],3,2)." " .substr($_POST["end"],11,8)."')";
 	$result = $conn->query($sql);
 	
 	echo "The event ".$_POST["event_name"].", ".$_POST["description"].", ".$_POST["location"].",".substr($_POST["start"],6,4)."-".substr($_POST["start"],0,2)."-".substr($_POST["start"],3,2)." ".substr($_POST["start"],11,8). ",".substr($_POST["end"],6,4)."-".substr($_POST["end"],0,2)."-".substr($_POST["end"],3,2)." ".substr($_POST["end"],11,8)." has been uploaded.";
 	
 	if (isset($_POST["deadline"]) and !empty($_POST["deadline"]) and isset($_POST["cost"]) and !empty($_POST["cost"]))
 	{
-		$sql = "SELECT * FROM signup ORDER BY signup_id;";
+		$sql = "SELECT * FROM SignUp ORDER BY signup_id;";
 		$result = $conn->query($sql);
 
 		$count = 1;
@@ -63,7 +63,7 @@ else
 			}
 		}
 
-		$sql = "INSERT INTO signup VALUES(".$count.",'".substr($_POST["deadline"],6,4)."-".substr($_POST["deadline"],0,2)."-".substr($_POST["deadline"],3,2)." ".substr($_POST["deadline"],11,8). "',".$_POST["cost"].",".$event_id.")";
+		$sql = "INSERT INTO SignUp VALUES(".$count.",'".substr($_POST["deadline"],6,4)."-".substr($_POST["deadline"],0,2)."-".substr($_POST["deadline"],3,2)." ".substr($_POST["deadline"],11,8). "',".$_POST["cost"].",".$event_id.")";
 		$result = $conn->query($sql);
 	
 		echo "A signup has been uploaded for the event.";

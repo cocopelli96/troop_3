@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT uid, uname, pass FROM useraccount";
+	$sql = "SELECT uid, uname, pass FROM UserAccount";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {

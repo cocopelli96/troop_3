@@ -41,7 +41,7 @@ else
 		}
 		echo "Counselors deleted.";
 		
-		$sql = "SELECT badge_id FROM badges;";
+		$sql = "SELECT badge_id FROM Badges;";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
@@ -49,7 +49,7 @@ else
 			while($row = $result->fetch_assoc()) {
 				if ($row["badge_id"] == $_POST["badgeDelete"])
 				{
-					$sql = "DELETE FROM badges WHERE badge_id = ".$row["badge_id"];
+					$sql = "DELETE FROM Badges WHERE badge_id = ".$row["badge_id"];
 					$result = $conn->query($sql);
 					break;
 				}

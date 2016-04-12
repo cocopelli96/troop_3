@@ -31,7 +31,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql0 = "SELECT * FROM patrol ORDER BY patrol_id;";
+	$sql0 = "SELECT * FROM Patrol ORDER BY patrol_id;";
 	$result0 = $conn->query($sql0);
 
 	if ($result0->num_rows > 0) {
@@ -57,7 +57,7 @@ else
 				</thead>
 				<tbody>";
 
-			$sql = "SELECT patrol.patrol_id, scout.sid, concat(sfn, ' ', sln) as name, concat(street, ' ', city, ', ', state, ' ', zip) as address, rank_title, lead_title FROM scout, address, leadershipposition, rank, patrol WHERE scout.sid = address.sid and scout.patrol_id = patrol.patrol_id and scout.rank_id = rank.rank_id and scout.lead_id = leadershipposition.lead_id ORDER BY patrol_id;";
+			$sql = "SELECT Patrol.patrol_id, Scout.sid, concat(sfn, ' ', sln) as name, concat(street, ' ', city, ', ', state, ' ', zip) as address, rank_title, lead_title FROM Scout, Address, LeadershipPosition, Rank, Patrol WHERE Scout.sid = Address.sid and Scout.patrol_id = Patrol.patrol_id and Scout.rank_id = Rank.rank_id and Scout.lead_id = LeadershipPosition.lead_id ORDER BY patrol_id;";
 			$result = $conn->query($sql);
 
 			$filled = false;

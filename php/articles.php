@@ -93,7 +93,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT fid, path, fname, file_type FROM files, filetype WHERE files.type_id = filetype.type_id";
+	$sql = "SELECT fid, path, fname, file_type FROM Files, FileType WHERE Files.type_id = FileType.type_id";
 	$result = $conn->query($sql);
 
 	$filled = false;

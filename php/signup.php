@@ -33,7 +33,7 @@ else
 {
 	if(isset($_COOKIE["username"]))
 	{
-		$sql = "SELECT uid, uname, pass, perm_id FROM useraccount";
+		$sql = "SELECT uid, uname, pass, perm_id FROM UserAccount";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
@@ -47,7 +47,7 @@ else
 			}
 		}
 	
-		$sql = "SELECT * FROM userscout";
+		$sql = "SELECT * FROM UserScout";
 		$result = $conn->query($sql);
 
 		$scout = 0;
@@ -76,7 +76,7 @@ if ($scout > 0)
 	} 
 	else
 	{
-		$sql = "SELECT * FROM attendant";
+		$sql = "SELECT * FROM Attendant";
 		$result = $conn->query($sql);
 
 		$registered = false;

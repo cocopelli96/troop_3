@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM badges ORDER BY badge_id;";
+	$sql = "SELECT * FROM Badges ORDER BY badge_id;";
 	$result = $conn->query($sql);
 
 	$count = 1;
@@ -41,7 +41,7 @@ else
 		}
 	}
 
-	$sql = "INSERT INTO badges VALUES(".$count.",'".$_POST["badgeTitle"]."')";
+	$sql = "INSERT INTO Badges VALUES(".$count.",'".$_POST["badgeTitle"]."')";
 	$result = $conn->query($sql);
 	
 	echo "The badge ".$_POST["badgeTitle"]." has been uploaded.";

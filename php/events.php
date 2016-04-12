@@ -100,7 +100,7 @@ if ($conn->connect_error)
 }
 else
 {
-	$sql = "SELECT * FROM event ORDER BY event_id;";
+	$sql = "SELECT * FROM Event ORDER BY event_id;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -163,7 +163,7 @@ else
 						<tr>
 							<td>Location:</td>";
 				
-				$sql1 = "SELECT * FROM signup ORDER BY event_id;";
+				$sql1 = "SELECT * FROM SignUp ORDER BY event_id;";
 				$result1 = $conn->query($sql1);
 
 				$filled = false;
@@ -202,7 +202,7 @@ else
 							<td colspan='2'>".$row["description"]."</td>
 						</tr>";
 						
-				$sql1 = "SELECT * FROM signup ORDER BY event_id;";
+				$sql1 = "SELECT * FROM SignUp ORDER BY event_id;";
 				$result1 = $conn->query($sql1);
 
 				if ($result1->num_rows > 0) {

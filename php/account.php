@@ -38,7 +38,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM useraccount, permission where useraccount.perm_id = permission.perm_id ";
+	$sql = "SELECT * FROM UserAccount, Permission where UserAccount.perm_id = Permission.perm_id ";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -75,7 +75,7 @@ else
 		}
 	}
 
-	$sql = "SELECT * FROM accountcontact where uid = ". $uid;
+	$sql = "SELECT * FROM AccountContact where uid = ". $uid;
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -108,7 +108,7 @@ else
 		}
 	}
 
-	$sql = "SELECT * FROM userscout where uid = ". $uid;
+	$sql = "SELECT * FROM UserScout where uid = ". $uid;
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -127,7 +127,7 @@ else
 			}
 			else
 			{
-				$sql1 = "SELECT * FROM scout WHERE sid = ".$row["sid"];
+				$sql1 = "SELECT * FROM Scout WHERE sid = ".$row["sid"];
 				$result1 = $conn2->query($sql1);
 			
 				if ($result1->num_rows > 0) {

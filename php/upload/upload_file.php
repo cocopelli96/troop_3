@@ -69,7 +69,7 @@ if ($uploadOk == 0) {
 		} 
 		else
 		{
-			$sql = "SELECT * FROM files";
+			$sql = "SELECT * FROM Files";
 			$result = $conn->query($sql);
 
 			$count = 1;
@@ -84,7 +84,7 @@ if ($uploadOk == 0) {
 				}
 			}
 		
-			$sql = "INSERT INTO files VALUES(".$count.",'".$database_file."','".$file_name."', 101)";
+			$sql = "INSERT INTO Files VALUES(".$count.",'".$database_file."','".$file_name."', 101)";
 			$result = $conn->query($sql);
 		}
 		$conn->close();

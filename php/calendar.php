@@ -94,7 +94,7 @@ if ($conn->connect_error)
 }
 else
 {
-	$sql = "SELECT * FROM event";
+	$sql = "SELECT * FROM Event";
 	$result = $conn->query($sql);
 	
 	if ($result->num_rows > 0) {

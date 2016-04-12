@@ -30,7 +30,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql0 = "SELECT * FROM useraccount, permission where useraccount.perm_id = permission.perm_id ORDER BY uid;";
+	$sql0 = "SELECT * FROM UserAccount, Permission where UserAccount.perm_id = Permission.perm_id ORDER BY uid;";
 	$result0 = $conn->query($sql0);
 
 	echo "
@@ -62,7 +62,7 @@ else
 				<td>".$row0["perm_title"]."</td>
 				<td>";
 		
-			$sql2 = "SELECT * FROM accountcontact WHERE accountcontact.uid = ".$row0["uid"]." and accountcontact.contact_id = 22";
+			$sql2 = "SELECT * FROM AccountContact WHERE AccountContact.uid = ".$row0["uid"]." and AccountContact.contact_id = 22";
 			$result2 = $conn->query($sql2);
 
 			if ($result2->num_rows > 0) {
@@ -81,7 +81,7 @@ else
 	
 			echo "</td><td>";
 		
-			$sql2 = "SELECT * FROM accountcontact WHERE accountcontact.uid = ".$row0["uid"]." and accountcontact.contact_id = 11";
+			$sql2 = "SELECT * FROM AccountContact WHERE AccountContact.uid = ".$row0["uid"]." and AccountContact.contact_id = 11";
 			$result2 = $conn->query($sql2);
 
 			if ($result2->num_rows > 0) {
@@ -100,7 +100,7 @@ else
 		
 			echo "</td><td>";
 		
-			$sql2 = "SELECT * FROM userscout WHERE userscout.uid = ".$row0["uid"];
+			$sql2 = "SELECT * FROM UserScout WHERE UserScout.uid = ".$row0["uid"];
 			$result2 = $conn->query($sql2);
 
 			if ($result2->num_rows > 0) {
@@ -116,7 +116,7 @@ else
 						else
 						{
 					
-							$sql3 = "SELECT * FROM scout";
+							$sql3 = "SELECT * FROM Scout";
 							$result3 = $conn2->query($sql3);
 
 							if ($result3->num_rows > 0) {

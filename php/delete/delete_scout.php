@@ -41,7 +41,7 @@ else
 		}
 		echo "Contacts deleted.";
 		
-		$sql = "SELECT * FROM address;";
+		$sql = "SELECT * FROM Address;";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
@@ -49,7 +49,7 @@ else
 			while($row = $result->fetch_assoc()) {
 				if ($row["sid"] == $_POST["sidDelete"])
 				{
-					$sql = "DELETE FROM address WHERE sid = ".$row["sid"];
+					$sql = "DELETE FROM Address WHERE sid = ".$row["sid"];
 					$result = $conn->query($sql);
 					break;
 				}
@@ -57,7 +57,7 @@ else
 		
 			echo "Address deleted.";
 				
-			$sql = "SELECT * FROM scout;";
+			$sql = "SELECT * FROM Scout;";
 			$result = $conn->query($sql);
 
 			if ($result->num_rows > 0) {
@@ -65,7 +65,7 @@ else
 				while($row = $result->fetch_assoc()) {
 					if ($row["sid"] == $_POST["sidDelete"])
 					{
-						$sql = "DELETE FROM scout WHERE sid = ".$row["sid"];
+						$sql = "DELETE FROM Scout WHERE sid = ".$row["sid"];
 						$result = $conn->query($sql);
 						break;
 					}

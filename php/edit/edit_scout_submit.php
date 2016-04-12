@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT scout.sid, sfn, sln, aid, street, city, state, zip, lead_id, rank_id, patrol_id FROM scout, address WHERE scout.sid = address.sid;";
+	$sql = "SELECT Scout.sid, sfn, sln, aid, street, city, state, zip, lead_id, rank_id, patrol_id FROM Scout, Address WHERE Scout.sid = Address.sid;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -39,7 +39,7 @@ else
 				{
 					if ($_POST["sfn"] != $row["sfn"])
 					{
-						$sql0 = "UPDATE scout SET sfn = '".$_POST["sfn"]."' WHERE sid = ".$_POST["sid"];
+						$sql0 = "UPDATE Scout SET sfn = '".$_POST["sfn"]."' WHERE sid = ".$_POST["sid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit scout first name.";
 					}
@@ -48,7 +48,7 @@ else
 				{
 					if ($_POST["sln"] != $row["sln"])
 					{
-						$sql0 = "UPDATE scout SET sln = '".$_POST["sln"]."' WHERE sid = ".$_POST["sid"];
+						$sql0 = "UPDATE Scout SET sln = '".$_POST["sln"]."' WHERE sid = ".$_POST["sid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit scout last name.";
 					}
@@ -57,7 +57,7 @@ else
 				{
 					if ($_POST["patrols"] != $row["patrol_id"])
 					{
-						$sql0 = "UPDATE scout SET patrol_id = '".$_POST["patrols"]."' WHERE sid = ".$_POST["sid"];
+						$sql0 = "UPDATE Scout SET patrol_id = '".$_POST["patrols"]."' WHERE sid = ".$_POST["sid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit scout patrol.";
 					}
@@ -66,7 +66,7 @@ else
 				{
 					if ($_POST["rank"] != $row["rank_id"])
 					{
-						$sql0 = "UPDATE scout SET rank_id = '".$_POST["rank"]."' WHERE sid = ".$_POST["sid"];
+						$sql0 = "UPDATE Scout SET rank_id = '".$_POST["rank"]."' WHERE sid = ".$_POST["sid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit scout rank.";
 					}
@@ -75,7 +75,7 @@ else
 				{
 					if ($_POST["leadership"] != $row["lead_id"])
 					{
-						$sql0 = "UPDATE scout SET lead_id = '".$_POST["leadership"]."' WHERE sid = ".$_POST["sid"];
+						$sql0 = "UPDATE Scout SET lead_id = '".$_POST["leadership"]."' WHERE sid = ".$_POST["sid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit scout leadership position.";
 					}
@@ -84,7 +84,7 @@ else
 				{
 					if ($_POST["street"] != $row["street"])
 					{
-						$sql0 = "UPDATE address SET street = '".$_POST["street"]."' WHERE sid = ".$_POST["sid"];
+						$sql0 = "UPDATE Address SET street = '".$_POST["street"]."' WHERE sid = ".$_POST["sid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit scout street address.";
 					}
@@ -93,7 +93,7 @@ else
 				{
 					if ($_POST["city"] != $row["city"])
 					{
-						$sql0 = "UPDATE address SET city = '".$_POST["city"]."' WHERE sid = ".$_POST["sid"];
+						$sql0 = "UPDATE Address SET city = '".$_POST["city"]."' WHERE sid = ".$_POST["sid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit scout city address.";
 					}
@@ -102,7 +102,7 @@ else
 				{
 					if ($_POST["state"] != $row["state"])
 					{
-						$sql0 = "UPDATE address SET state = '".$_POST["state"]."' WHERE sid = ".$_POST["sid"];
+						$sql0 = "UPDATE Address SET state = '".$_POST["state"]."' WHERE sid = ".$_POST["sid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit scout state address.";
 					}
@@ -111,7 +111,7 @@ else
 				{
 					if ($_POST["zip"] != $row["zip"])
 					{
-						$sql0 = "UPDATE address SET zip = '".$_POST["zip"]."' WHERE sid = ".$_POST["sid"];
+						$sql0 = "UPDATE Address SET zip = '".$_POST["zip"]."' WHERE sid = ".$_POST["sid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit scout zip address.";
 					}

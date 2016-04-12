@@ -40,7 +40,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql0 = "SELECT counselor.badge_id, badge_name FROM counselor, badges WHERE counselor.badge_id = badges.badge_id GROUP BY badge_id ORDER BY badge_id;";
+	$sql0 = "SELECT counselor.badge_id, badge_name FROM counselor, Badges WHERE counselor.badge_id = Badges.badge_id GROUP BY badge_id ORDER BY badge_id;";
 	$result0 = $conn->query($sql0);
 
 	if ($result0->num_rows > 0) {
@@ -75,7 +75,7 @@ else
 				</thead>
 				<tbody>";
 
-			$sql = "SELECT badge_id, scout.sid, concat(sfn, ' ', sln) as name, concat(street, ' ', city, ', ', state, ' ', zip) as address FROM scout, address, counselor WHERE scout.sid = address.sid and scout.sid = counselor.sid ORDER BY badge_id;";
+			$sql = "SELECT badge_id, Scout.sid, concat(sfn, ' ', sln) as name, concat(street, ' ', city, ', ', state, ' ', zip) as address FROM Scout, Address, counselor WHERE Scout.sid = Address.sid and Scout.sid = counselor.sid ORDER BY badge_id;";
 			$result = $conn->query($sql);
 
 			$filled = false;

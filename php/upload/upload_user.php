@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM useraccount ORDER BY uid;";
+	$sql = "SELECT * FROM UserAccount ORDER BY uid;";
 	$result = $conn->query($sql);
 
 	$uid = 1;
@@ -41,14 +41,14 @@ else
 		}
 	}
 
-	$sql = "INSERT INTO useraccount VALUES(".$uid.",'".$_POST["uname"]."','".$_POST["pass"]."',".$_POST["permission"].")";
+	$sql = "INSERT INTO UserAccount VALUES(".$uid.",'".$_POST["uname"]."','".$_POST["pass"]."',".$_POST["permission"].")";
 	$result = $conn->query($sql);
 	
 	echo "The user ".$_POST["uname"]." ".$_POST["permission"]." has been uploaded.";
 	
 	if (isset($_POST["phone"]) and !empty($_POST["phone"]))
 	{
-		$sql = "INSERT INTO accountcontact VALUES(".$uid.",22,'".$_POST["phone"]."')";
+		$sql = "INSERT INTO AccountContact VALUES(".$uid.",22,'".$_POST["phone"]."')";
 		$result = $conn->query($sql);
 	
 		echo "The home phone number ".$_POST["phone"]." has been uploaded.";
@@ -56,7 +56,7 @@ else
 	
 	if (isset($_POST["email"]) and !empty($_POST["email"]))
 	{
-		$sql = "INSERT INTO accountcontact VALUES(".$uid.",11,'".$_POST["email"]."')";
+		$sql = "INSERT INTO AccountContact VALUES(".$uid.",11,'".$_POST["email"]."')";
 		$result = $conn->query($sql);
 	
 		echo "The email ".$_POST["email"]." has been uploaded.";
@@ -64,7 +64,7 @@ else
 	
 	if (isset($_POST["scout"]) and !empty($_POST["scout"]) and $_POST["scout"] != "none")
 	{
-		$sql = "INSERT INTO userscout VALUES(".$uid.",".$_POST["scout"].")";
+		$sql = "INSERT INTO UserScout VALUES(".$uid.",".$_POST["scout"].")";
 		$result = $conn->query($sql);
 	
 		echo "The connection to ".$_POST["scout"]." has been made.";

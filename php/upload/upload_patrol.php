@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM patrol ORDER BY patrol_id;";
+	$sql = "SELECT * FROM Patrol ORDER BY patrol_id;";
 	$result = $conn->query($sql);
 
 	$count = 1;
@@ -41,7 +41,7 @@ else
 		}
 	}
 
-	$sql = "INSERT INTO patrol VALUES(".$count.",'".$_POST["pname"]."')";
+	$sql = "INSERT INTO Patrol VALUES(".$count.",'".$_POST["pname"]."')";
 	$result = $conn->query($sql);
 	
 	echo "The patrol ".$_POST["pname"]." has been uploaded.";

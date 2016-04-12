@@ -35,7 +35,7 @@ if ($conn->connect_error)
 }
 else
 {
-	$sql = "SELECT * FROM event ORDER BY event_id;";
+	$sql = "SELECT * FROM Event ORDER BY event_id;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -51,7 +51,7 @@ else
 					</thead>
 					<tbody>";
 				
-				$sql1 = "SELECT * FROM attendant WHERE event_id = ".$row["event_id"];
+				$sql1 = "SELECT * FROM Attendant WHERE event_id = ".$row["event_id"];
 				$result1 = $conn->query($sql1);
 
 				$filled = false;
@@ -71,7 +71,7 @@ else
 							}
 							else
 							{
-								$sql2 = "SELECT * FROM scout WHERE sid = ".$row1["sid"];
+								$sql2 = "SELECT * FROM Scout WHERE sid = ".$row1["sid"];
 								$result2 = $conn2->query($sql2);
 
 								$filled2 = false;

@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM useraccount;";
+	$sql = "SELECT * FROM UserAccount;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -35,7 +35,7 @@ else
 		while($row = $result->fetch_assoc()) {
 			if ($row["uid"] == $_POST["uid"])
 			{
-				$sql1 = "UPDATE useraccount SET pass = '".$_POST["pass"]."' WHERE uid = ".$_POST["uid"].";";
+				$sql1 = "UPDATE UserAccount SET pass = '".$_POST["pass"]."' WHERE uid = ".$_POST["uid"].";";
 				$result1 = $conn->query($sql1);
 			
 				echo "Password has been changed.";

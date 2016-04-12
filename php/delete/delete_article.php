@@ -44,7 +44,7 @@ if ($uploadOk == 0) {
 		} 
 		else
 		{
-			$sql = "SELECT * FROM files";
+			$sql = "SELECT * FROM Files";
 			$result = $conn->query($sql);
 
 			if ($result->num_rows > 0) {
@@ -52,7 +52,7 @@ if ($uploadOk == 0) {
 				while($row = $result->fetch_assoc()) {
 					if ($row["path"] == $_POST["fileToDelete"])
 					{
-						$sql = "DELETE FROM files WHERE fid = ". $row["fid"];
+						$sql = "DELETE FROM Files WHERE fid = ". $row["fid"];
 						$result = $conn->query($sql);
 						break;
 					}

@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM useraccount;";
+	$sql = "SELECT * FROM UserAccount;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -34,14 +34,14 @@ else
 		while($row = $result->fetch_assoc()) {
 			if ($row["uid"] == $_POST["uidDelete"])
 			{
-				$sql = "DELETE FROM accountcontact WHERE uid = ".$row["uid"];
+				$sql = "DELETE FROM AccountContact WHERE uid = ".$row["uid"];
 				$result = $conn->query($sql);
 				break;
 			}
 		}
 		echo "Contacts deleted.";
 		
-		$sql = "SELECT * FROM userscout;";
+		$sql = "SELECT * FROM UserScout;";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
@@ -49,7 +49,7 @@ else
 			while($row = $result->fetch_assoc()) {
 				if ($row["uid"] == $_POST["uidDelete"])
 				{
-					$sql = "DELETE FROM userscout WHERE uid = ".$row["uid"];
+					$sql = "DELETE FROM UserScout WHERE uid = ".$row["uid"];
 					$result = $conn->query($sql);
 					break;
 				}
@@ -57,7 +57,7 @@ else
 		
 			echo "Scout connections deleted.";
 				
-			$sql = "SELECT * FROM useraccount;";
+			$sql = "SELECT * FROM UserAccount;";
 			$result = $conn->query($sql);
 
 			if ($result->num_rows > 0) {
@@ -65,7 +65,7 @@ else
 				while($row = $result->fetch_assoc()) {
 					if ($row["uid"] == $_POST["uidDelete"])
 					{
-						$sql = "DELETE FROM useraccount WHERE uid = ".$row["uid"];
+						$sql = "DELETE FROM UserAccount WHERE uid = ".$row["uid"];
 						$result = $conn->query($sql);
 						break;
 					}

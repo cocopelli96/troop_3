@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM scout ORDER BY sid;";
+	$sql = "SELECT * FROM Scout ORDER BY sid;";
 	$result = $conn->query($sql);
 
 	$sid = 1;
@@ -41,12 +41,12 @@ else
 		}
 	}
 
-	$sql = "INSERT INTO scout VALUES(".$sid.",'".$_POST["sfn"]."','".$_POST["sln"]."',".$_POST["patrols"].",".$_POST["leadership"].",".$_POST["rank"].")";
+	$sql = "INSERT INTO Scout VALUES(".$sid.",'".$_POST["sfn"]."','".$_POST["sln"]."',".$_POST["patrols"].",".$_POST["leadership"].",".$_POST["rank"].")";
 	$result = $conn->query($sql);
 	
 	echo "The scout ".$_POST["sfn"]." ".$_POST["sln"]." ".$_POST["patrols"]."," .$_POST["rank"].",".$_POST["leadership"]."has been uploaded.";
 	
-	$sql = "SELECT * FROM address ORDER BY aid;";
+	$sql = "SELECT * FROM Address ORDER BY aid;";
 	$result = $conn->query($sql);
 
 	$count = 1;
@@ -61,7 +61,7 @@ else
 		}
 	}
 
-	$sql = "INSERT INTO address VALUES(".$count.",'".$_POST["street"]."','".$_POST["city"]."','".$_POST["state"]."','" .$_POST["zip"]."',".$sid.")";
+	$sql = "INSERT INTO Address VALUES(".$count.",'".$_POST["street"]."','".$_POST["city"]."','".$_POST["state"]."','" .$_POST["zip"]."',".$sid.")";
 	$result = $conn->query($sql);
 	
 	echo "The address ".$_POST["street"]." ".$_POST["city"].", ".$_POST["state"]." " .$_POST["zip"]." has been uploaded.";

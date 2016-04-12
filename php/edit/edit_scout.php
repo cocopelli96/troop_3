@@ -29,7 +29,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT scout.sid, sfn, sln, aid, street, city, state, zip, lead_id, rank_id, patrol_id FROM scout, address WHERE scout.sid = address.sid;";
+	$sql = "SELECT Scout.sid, sfn, sln, aid, street, city, state, zip, lead_id, rank_id, patrol_id FROM Scout, Address WHERE Scout.sid = Address.sid;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -157,7 +157,7 @@ else
 					<select name='rank' id='rank'>
 						<option value='none'>Select a Rank</option>";
 	
-		$sql1 = "SELECT * FROM rank";
+		$sql1 = "SELECT * FROM Rank";
 		$result1 = $conn->query($sql1);
 
 		if ($result1->num_rows > 0) {
@@ -185,7 +185,7 @@ else
 					<select name='leadership' id='leadership'>
 						<option value='none'>Select a Leadership Position</option>";
 	
-		$sql1 = "SELECT * FROM leadershipposition";
+		$sql1 = "SELECT * FROM LeadershipPosition";
 		$result1 = $conn->query($sql1);
 
 		if ($result1->num_rows > 0) {
@@ -213,7 +213,7 @@ else
 					<select name='patrols' id='patrols'>
 						<option value='none'>Select a Patrol</option>";
 	
-		$sql1 = "SELECT * FROM patrol";
+		$sql1 = "SELECT * FROM Patrol";
 		$result1 = $conn->query($sql1);
 
 		if ($result1->num_rows > 0) {

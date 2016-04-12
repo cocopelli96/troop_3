@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM useraccount;";
+	$sql = "SELECT * FROM UserAccount;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -39,7 +39,7 @@ else
 				{
 					if ($_POST["uname"] != $row["uname"])
 					{
-						$sql0 = "UPDATE useraccount SET uname = '".$_POST["uname"]."' WHERE uid = ".$_POST["uid"];
+						$sql0 = "UPDATE UserAccount SET uname = '".$_POST["uname"]."' WHERE uid = ".$_POST["uid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit user name.";
 					}
@@ -48,7 +48,7 @@ else
 				{
 					if ($_POST["pass"] != $row["pass"])
 					{
-						$sql0 = "UPDATE useraccount SET pass = '".$_POST["pass"]."' WHERE uid = ".$_POST["uid"];
+						$sql0 = "UPDATE UserAccount SET pass = '".$_POST["pass"]."' WHERE uid = ".$_POST["uid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit user password.";
 					}
@@ -57,13 +57,13 @@ else
 				{
 					if ($_POST["permission"] != $row["perm_id"])
 					{
-						$sql0 = "UPDATE useraccount SET perm_id = '".$_POST["permission"]."' WHERE uid = ".$_POST["uid"];
+						$sql0 = "UPDATE UserAccount SET perm_id = '".$_POST["permission"]."' WHERE uid = ".$_POST["uid"];
 						$result0 = $conn->query($sql0);
 						echo "Edit user permissions.";
 					}
 				}
 			
-				$sql1 = "SELECT * FROM accountcontact WHERE uid = ".$_POST["uid"]." and contact_id = 22";
+				$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$_POST["uid"]." and contact_id = 22";
 				$result1 = $conn->query($sql1);
 			
 				if ($result1->num_rows > 0) {
@@ -73,14 +73,14 @@ else
 						{
 							if ($_POST["phone"] != $row1["acct_contact"])
 							{
-								$sql0 = "UPDATE accountcontact SET acct_contact = '".$_POST["phone"]."' WHERE uid = ".$_POST["uid"];
+								$sql0 = "UPDATE AccountContact SET acct_contact = '".$_POST["phone"]."' WHERE uid = ".$_POST["uid"];
 								$result0 = $conn->query($sql0);
 								echo "Edit user phone.";
 							}
 						}
 						else
 						{
-							$sql0 = "DELETE FROM accountcontact WHERE uid = ".$_POST["uid"]." and contact_id = 22";
+							$sql0 = "DELETE FROM AccountContact WHERE uid = ".$_POST["uid"]." and contact_id = 22";
 							$result0 = $conn->query($sql0);
 							echo "Delete user phone.";
 						}
@@ -88,12 +88,12 @@ else
 				}
 				else
 				{
-					$sql0 = "INSERT INTO accountcontact VALUES(".$_POST["uid"].",22,'" .$_POST["phone"]."')";
+					$sql0 = "INSERT INTO AccountContact VALUES(".$_POST["uid"].",22,'" .$_POST["phone"]."')";
 					$result0 = $conn->query($sql0);
 					echo "Create user phone.";
 				}
 			
-				$sql1 = "SELECT * FROM accountcontact WHERE uid = ".$_POST["uid"]." and contact_id = 11";
+				$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$_POST["uid"]." and contact_id = 11";
 				$result1 = $conn->query($sql1);
 
 				if ($result1->num_rows > 0) {
@@ -103,14 +103,14 @@ else
 						{
 							if ($_POST["email"] != $row1["acct_contact"])
 							{
-								$sql0 = "UPDATE accountcontact SET acct_contact = '".$_POST["email"]."' WHERE uid = ".$_POST["uid"];
+								$sql0 = "UPDATE AccountContact SET acct_contact = '".$_POST["email"]."' WHERE uid = ".$_POST["uid"];
 								$result0 = $conn->query($sql0);
 								echo "Edit user email.";
 							}
 						}
 						else
 						{
-							$sql0 = "DELETE FROM accountcontact WHERE uid = ".$_POST["uid"]." and contact_id = 11";
+							$sql0 = "DELETE FROM AccountContact WHERE uid = ".$_POST["uid"]." and contact_id = 11";
 							$result0 = $conn->query($sql0);
 							echo "Delete user email.";
 						}
@@ -118,12 +118,12 @@ else
 				}
 				else
 				{
-					$sql0 = "INSERT INTO accountcontact VALUES(".$_POST["uid"].",11,'" .$_POST["email"]."')";
+					$sql0 = "INSERT INTO AccountContact VALUES(".$_POST["uid"].",11,'" .$_POST["email"]."')";
 					$result0 = $conn->query($sql0);
 					echo "Create user email.";
 				}
 	
-				$sql1 = "SELECT * FROM userscout WHERE uid = ".$_POST["uid"];
+				$sql1 = "SELECT * FROM UserScout WHERE uid = ".$_POST["uid"];
 				$result1 = $conn->query($sql1);
 
 				if ($result1->num_rows > 0) {
@@ -133,14 +133,14 @@ else
 						{
 							if ($_POST["scout"] != $row1["sid"])
 							{
-								$sql0 = "UPDATE userscout SET sid = ".$_POST["scout"]." WHERE uid = ".$_POST["uid"];
+								$sql0 = "UPDATE UserScout SET sid = ".$_POST["scout"]." WHERE uid = ".$_POST["uid"];
 								$result0 = $conn->query($sql0);
 								echo "Edit user scout connection.";
 							}
 						}
 						else
 						{
-							$sql0 = "DELETE FROM userscout WHERE uid = ".$_POST["uid"];
+							$sql0 = "DELETE FROM UserScout WHERE uid = ".$_POST["uid"];
 							$result0 = $conn->query($sql0);
 							echo "Delete user scout connection.";
 						}
@@ -150,7 +150,7 @@ else
 				{
 					if (isset($_POST["scout"]) && !empty($_POST["scout"]) && $_POST["scout"] != "none")
 					{
-						$sql0 = "INSERT INTO userscout VALUES(".$_POST["uid"].",".$_POST["scout"].")";
+						$sql0 = "INSERT INTO UserScout VALUES(".$_POST["uid"].",".$_POST["scout"].")";
 						$result0 = $conn->query($sql0);
 						echo "Create user scout connection.";
 					}

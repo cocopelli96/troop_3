@@ -26,11 +26,11 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM scout WHERE patrol_id = ".$_POST["patrolDelete"].";";
+	$sql = "SELECT * FROM Scout WHERE patrol_id = ".$_POST["patrolDelete"].";";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows == 0) {
-		$sql = "SELECT * FROM patrol;";
+		$sql = "SELECT * FROM Patrol;";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
@@ -38,7 +38,7 @@ else
 			while($row = $result->fetch_assoc()) {
 				if ($row["patrol_id"] == $_POST["patrolDelete"])
 				{
-					$sql = "DELETE FROM patrol WHERE patrol_id = ".$row["patrol_id"];
+					$sql = "DELETE FROM Patrol WHERE patrol_id = ".$row["patrol_id"];
 					$result = $conn->query($sql);
 					break;
 				}

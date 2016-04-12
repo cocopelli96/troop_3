@@ -29,7 +29,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM useraccount, permission WHERE permission.perm_id = useraccount.perm_id;";
+	$sql = "SELECT * FROM UserAccount, Permission WHERE Permission.perm_id = UserAccount.perm_id;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -72,7 +72,7 @@ else
 				<td>
 					<input type='textbox' name='phone' id='phone' ";
 	
-		$sql1 = "SELECT * FROM accountcontact WHERE uid = ".$row["uid"]." and contact_id = 22";
+		$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$row["uid"]." and contact_id = 22";
 		$result1 = $conn->query($sql1);
 
 		if ($result1->num_rows > 0) {
@@ -92,7 +92,7 @@ else
 				<td>
 					<input type='textbox' name='email' id='email' ";
 	
-		$sql1 = "SELECT * FROM accountcontact WHERE uid = ".$row["uid"]." and contact_id = 11";
+		$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$row["uid"]." and contact_id = 11";
 		$result1 = $conn->query($sql1);
 
 		if ($result1->num_rows > 0) {
@@ -113,7 +113,7 @@ else
 					<select name='permission' id='permission'>
 						<option value='none'>Select a Permission Level</option>";
 	
-		$sql1 = "SELECT * FROM permission";
+		$sql1 = "SELECT * FROM Permission";
 		$result1 = $conn->query($sql1);
 
 		if ($result1->num_rows > 0) {
@@ -150,7 +150,7 @@ else
 						<option value='none'>Select a Scout</option>";
 	
 	
-			$sql1 = "SELECT * FROM userscout";
+			$sql1 = "SELECT * FROM UserScout";
 			$result1 = $conn->query($sql1);
 
 			if ($result1->num_rows > 0) {
@@ -167,7 +167,7 @@ else
 				$sid = 0;
 			}
 	
-			$sql3 = "SELECT * FROM scout";
+			$sql3 = "SELECT * FROM Scout";
 			$result3 = $conn2->query($sql3);
 
 			if ($result3->num_rows > 0) {

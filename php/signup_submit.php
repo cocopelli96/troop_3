@@ -34,7 +34,7 @@ if (isset($_POST["register"]) and !empty($_POST["register"]))
 		} 
 		else
 		{
-			$sql = "SELECT * FROM attendant";
+			$sql = "SELECT * FROM Attendant";
 			$result = $conn->query($sql);
 
 			$found = false;
@@ -51,7 +51,7 @@ if (isset($_POST["register"]) and !empty($_POST["register"]))
 			
 			if ($found == false)
 			{
-				$sql1 = "INSERT INTO attendant VALUES(".$_POST["scout"].",".$_POST["event_id"].");";
+				$sql1 = "INSERT INTO Attendant VALUES(".$_POST["scout"].",".$_POST["event_id"].");";
 				$result1 = $conn->query($sql1);
 				echo "You have been registered to attend this event.";
 			}
@@ -73,7 +73,7 @@ if (isset($_POST["register"]) and !empty($_POST["register"]))
 		} 
 		else
 		{
-			$sql = "SELECT * FROM attendant";
+			$sql = "SELECT * FROM Attendant";
 			$result = $conn->query($sql);
 
 			if ($result->num_rows > 0) {
@@ -81,7 +81,7 @@ if (isset($_POST["register"]) and !empty($_POST["register"]))
 				while($row = $result->fetch_assoc()) {
 					if ($row["sid"] == $_POST["scout"] && $row["event_id"] == $_POST["event_id"])
 					{
-						$sql1 = "DELETE FROM attendant WHERE sid = ".$row["sid"]." and event_id = ".$row["event_id"].";";
+						$sql1 = "DELETE FROM Attendant WHERE sid = ".$row["sid"]." and event_id = ".$row["event_id"].";";
 						$result1 = $conn->query($sql1);
 						echo "You have been unregistered to attend this event.";
 						break;

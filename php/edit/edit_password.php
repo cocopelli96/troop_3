@@ -29,7 +29,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM useraccount;";
+	$sql = "SELECT * FROM UserAccount;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {

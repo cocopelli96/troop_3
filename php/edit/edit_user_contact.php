@@ -29,7 +29,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM useraccount;";
+	$sql = "SELECT * FROM UserAccount;";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -48,7 +48,7 @@ else
 							<td>
 								<input type='textbox' name='phone' id='phone' ";
 	
-					$sql1 = "SELECT * FROM accountcontact WHERE uid = ".$row["uid"]." and contact_id = 22";
+					$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$row["uid"]." and contact_id = 22";
 					$result1 = $conn->query($sql1);
 
 					if ($result1->num_rows > 0) {
@@ -68,7 +68,7 @@ else
 							<td>
 								<input type='textbox' name='email' id='email' ";
 	
-					$sql1 = "SELECT * FROM acountcontact WHERE uid = ".$row["uid"]." and contact_id = 11";
+					$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$row["uid"]." and contact_id = 11";
 					$result1 = $conn->query($sql1);
 
 					if ($result1->num_rows > 0) {
