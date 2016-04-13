@@ -41,8 +41,8 @@ else
 						<td>User Phone Number</td>
 						<td>User Email Address</td>
 						<td>Scout</td>
-						<td>Edit</td>
-						<td>Delete</td>
+						<td style='min-width:auto;'>Edit</td>
+						<td style='min-width:auto;'>Delete</td>
 					</tr>
 				</thead>
 				<tbody>";
@@ -137,13 +137,13 @@ else
 			}
 	
 			echo "</td>
-				<td>
+				<td style='min-width:auto;'>
 					<form name='edit_user_form' action='./edit/edit_user_full.php' method='post'>
 						<input type='text' name='uidEdit' id='uidEdit' value='" . $row0["uid"] ."' style='display:none;'>
 						<button type='submit' class='table_button'>Edit</button>
 					</form>
 				</td>
-				<td>
+				<td style='min-width:auto;'>
 					<form name='delete_user_form' action='./delete/delete_user.php' method='post' onsubmit='return confirmDelete(\"user\");'>
 						<input type='text' name='uidDelete' id='uidDelete' value='" . $row0["uid"] ."' style='display:none;'>
 						<button type='submit' class='table_button'>Delete</button>

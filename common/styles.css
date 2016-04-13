@@ -1052,6 +1052,7 @@ text-decoration: none;
 	border-style: solid;
 	border-width: 3px;
 	padding: 5px;
+	min-width: 160px;
 }
 
 .table_button
@@ -1136,6 +1137,7 @@ text-decoration: none;
 #calendar td
 {
 	width: 15%;
+	min-width: 15%;
 	vertical-align: top;
 }
 
@@ -1543,9 +1545,10 @@ position: absolute;
 	margin-bottom: 10px;
 }
 
-.small_td
+.table .small_td
 {
 	width: 10%;
+	min-width: 10%;
 }
 
 .old_event

@@ -49,8 +49,8 @@ else
 						<td>Address</td>
 						<td>Phone Number</td>
 						<td>E-mail</td>
-						<td>Edit</td>
-						<td>Delete</td>
+						<td style='min-width:auto;'>Edit</td>
+						<td style='min-width:auto;'>Delete</td>
 					</tr>
 				</thead>
 				<tbody>";
@@ -110,13 +110,13 @@ else
 						}
 	
 						echo "</td>
-							<td>
+							<td style='min-width:auto;'>
 								<form name='edit_scout_form' action='./edit/edit_scout.php' method='post'>
 									<input type='text' name='sidEdit' id='sidEdit' value='" . $row["sid"] ."' style='display:none;'>
 									<button type='submit' class='table_button'>Edit</button>
 								</form>
 							</td>
-							<td>
+							<td style='min-width:auto;'>
 								<form name='delete_scout_form' action='./delete/delete_scout.php' method='post' onsubmit='return confirmDelete(\"scout\");'>
 									<input type='text' name='sidDelete' id='sidDelete' value='" . $row["sid"] ."' style='display:none;'>
 									<button type='submit' class='table_button'>Delete</button>
