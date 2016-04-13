@@ -1608,3 +1608,798 @@ position: absolute;
 }
 
 }
+
+
+/**************************************
+	Start Print Styles
+**************************************/
+
+@media print
+{
+
+html, body
+{
+	font-family: arial;
+	font-size: 12pt;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	color: #000000;
+	background-color: #ffffff;
+}
+
+h1
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#wrapper
+{
+	position: relative;
+	margin: auto;
+	width: 1000px;
+	height: 100%;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+/*****************************
+	Print Banner Styles
+*****************************/
+
+#banner
+{
+	font-size: 150%;
+	text-align: center;
+	/*height: 10%;*/
+	min-height: 80px;
+}
+
+#compass
+{
+	position: absolute;
+	left: 2px;
+	top: 0%;
+	/*height: 10%;*/
+	height: 80px;
+	/*width: 10%;*/
+	width: 90px;
+}
+
+#login
+{
+	position: absolute;
+	right: 2px;
+	top: 0%;
+}
+
+#login a:link, #login a:visited
+{
+	text-decoration: none;
+	color: #000000;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+/********************************
+	Print Navbar Styles
+********************************/
+
+#navbar #mobile_head
+{
+	display: none;
+}
+
+#mobile_nav
+{
+	display: inline;
+}
+
+#navbar
+{
+	border-top: solid #000000 2px;
+	border-bottom: solid #000000 2px;
+	width: 100%;
+	/*height: 5%;*/
+	height: 2em;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+#navbar a:link, #navbar a:visited
+{
+	text-decoration: none;
+	display: inline;
+	color: #000000;
+	vertical-align:middle;
+	border-left: solid #000000 2px;
+	line-height: 2em;
+	padding: 5px;
+}
+
+#navbar #gallery, #navbar #roster, #navbar #events
+{
+	position: absolute;
+	display: none;
+	/*top: 15.55%;*/
+	top: 116px;
+}
+
+#gallery
+{
+	left: 31.25%;
+}
+
+#gallery a:link, #gallery a:visited,
+#roster a:link, #roster a:visited,
+#events a:link, #events a:visited
+{
+	text-decoration: none;
+	display: block;
+	color: #000000;
+	background-color: #ffffff;
+	vertical-align: middle;
+	border-left: solid #000000 2px;
+	border-right: solid #000000 2px;
+	border-bottom: solid #000000 2px;
+	line-height: 2em;
+	padding: 5px;
+}
+
+#roster
+{
+	left: 45.75%;
+}
+
+#events
+{
+	left: 52.25%;
+}
+
+#tail_link
+{
+	border-right: solid #000000 2px;
+}
+
+.not_link
+{
+	text-decoration: none;
+	display: inline;
+	color: #000000;
+	vertical-align:middle;
+	border-left: solid #000000 2px;
+	line-height: 2em;
+	padding: 5px;
+}
+
+/*****************************
+	Print Generic Body Styles
+*****************************/
+
+#main
+{
+	/*height: 75%;*/
+	min-height: 75%;
+	/*width: 100%;*/
+	width: 99%;
+	padding: 5px;
+	/*overflow-y: auto;*/
+	background-color: #ffffff;
+}
+
+#content
+{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+#edit_content
+{
+	width: 40%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.edit_button
+{
+	float: right;
+	margin-right: 10px;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+}
+
+.edit_button:link, .edit_button:visited
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+.layer
+{
+	background-color: #ffffff;
+	border: solid #000000 3px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.table
+{
+	border-collapse: collapse;
+	width: 90%;
+	border-color: #000000;
+	border-style: solid;
+	border-width: 3px;
+	margin: auto;
+	margin-bottom: 10px;
+	background-color: #ffffff;
+}
+
+.table thead
+{
+	background-color: #ffffff;
+}
+
+.table td
+{
+	border-color: #000000;
+	border-style: solid;
+	border-width: 3px;
+	padding: 5px;
+}
+
+.table_button
+{
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+/*****************************
+	Print Home Page Styles
+*****************************/
+
+#prepared, #scout
+{
+	width: 100%;
+	display: block;
+}
+
+#badges
+{
+	width: 100%;
+}
+
+#intro
+{
+	width: 70%;
+	padding: 10px;
+}
+
+.sides
+{
+	width: 15%;
+}
+
+/*****************************
+	Print Login Styles
+*****************************/
+
+#login_content
+{
+	/*position: relative;
+	/*top: 25%;*
+	top: 100px;*/
+	width: 25%;
+	margin: auto;
+	margin-top: 100px;
+}
+
+#login_form table
+{
+	text-align: center;
+}
+
+/*****************************
+	Print Contact Styles
+*****************************/
+
+#contact_content
+{
+	width: 40%;
+	margin: auto;
+}
+
+#contact_form table
+{
+	margin: auto;
+}
+
+/*****************************
+	Print Calendar Styles
+*****************************/
+
+#calendar
+{
+	height: 80%;
+	margin-bottom: 10px;
+}
+
+#calendar td
+{
+	width: 12.8%;
+	vertical-align: top;
+}
+
+#calendar tbody td
+{
+	/*height: 20%;*/
+	height: 70px;
+}
+
+#cal_div
+{
+	text-align: center;
+	width: 90%;
+	margin: auto;
+}
+
+#month
+{
+	display: inline;
+}
+
+.current_day
+{
+	background-color: #ffffff;
+	font-weight: bold;
+}
+
+.cal_button
+{
+	width: auto;
+}
+
+/*****************************
+	Print Badges and Roster Styles
+*****************************/
+
+#table_holder
+{
+	margin-bottom: 10px;
+}
+
+#new_badge
+{
+	margin-right: 10px;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+}
+
+#new_badge:link, #new_badge:visited
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+#upload_counselor select
+{
+	width: 50%;
+}
+
+.table_head
+{
+	margin-left: 5%;
+	width: 85%;
+	float: left;
+}
+
+.delete_badge
+{
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.delete_full_badge
+{
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+	color: #000000;
+	margin-top: 20px;
+	float: left;
+}
+
+/*****************************
+	Print PLC Notes Styles
+*****************************/
+
+#notes_content
+{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 40px;
+}
+
+#plc_edit_content
+{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+/*****************************
+	Print Photo Styles
+*****************************/
+
+.delete_photo
+{
+	float: right;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+#images
+{
+	margin-bottom: 10px;
+}
+
+#images td
+{
+	width: 30%;
+}
+
+.image
+{
+	width: 100%;
+}
+
+/*****************************
+	Print File Management Styles
+*****************************/
+
+#add_file
+{
+	float: right;
+	margin-right: 10px;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+}
+
+#add_file:link, #add_file:visited
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+#add_form
+{
+	/*position: relative;
+	/*top: 25%;*
+	top: 100px;*/
+	width: 50%;
+	margin: auto;
+	margin-top: 100px;
+}
+
+#add_content
+{
+	/*position: relative;
+	/*top: 25%;*
+	top: 100px;*/
+	width: 40%;
+	margin: auto;
+	margin-top: 100px;
+}
+
+#return
+{
+	/* 
+position: absolute;
+	bottom: 10%;
+	right: 1%;
+ */
+	float: right;
+	margin: 10px 10px 10px 0;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+}
+
+#return:link, #return:visited
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+/*****************************
+	Print Article Styles
+*****************************/
+
+#open_article
+{
+	width: 90%;
+	margin: auto;
+}
+
+#articles
+{
+	margin-bottom: 10px;
+}
+
+#articles td
+{
+	border-width: 0;
+}
+
+#articles tr
+{
+	border: solid #000000 3px;
+}
+
+#article_return
+{
+	float: right;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	margin: 10px 10px 10px 0;
+	background-color: #ffffff;
+}
+
+#article_return:link, #article_return:visited
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+.delete_article
+{
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.open_article
+{
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.open_td, .delete_td
+{
+	width: 10%;
+}
+
+/*****************************
+	Print Downloads Page Styles
+*****************************/
+
+#downloads
+{
+	margin-bottom: 10px;
+}
+
+#downloads td
+{
+	border-width: 0;
+}
+
+#downloads tr
+{
+	border: solid #000000 3px;
+}
+
+.open_file, .open_file a:link, .open_file a:visited
+{
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	line-height: 2em;
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 75%;
+	text-decoration: none;
+}
+
+/*****************************
+	Print Links Page Styles
+*****************************/
+
+.no_dots
+{
+	list-style-type: none;
+}
+
+.no_dots a:link, .no_dots a:visited
+{
+	color: #000000;
+}
+
+/*****************************
+	Print Account Page Styles
+*****************************/
+
+#account
+{
+	line-height: 2em;
+}
+
+#edit_user_td
+{
+	width: 5%;
+}
+
+/*****************************
+	Print Event Styles
+*****************************/
+
+#date_left
+{
+	float: left;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	line-height: 2em;
+	background-color: #ffffff; /* #7a4d1f #4d4d00 */
+	color: #000000;
+	font-size: 75%;
+	text-decoration: none;
+}
+
+#date_right
+{
+	float: right;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	line-height: 2em;
+	background-color: #ffffff; /* #7a4d1f #4d4d00 */
+	color: #000000;
+	font-size: 75%;
+	text-decoration: none;
+}
+
+#date_table
+{
+	margin-bottom: 10px;
+}
+
+#date_table td
+{
+	border-width: 0;
+	text-align: center;
+}
+
+.event_button
+{
+	float: right;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	line-height: 2em;
+	background-color: #ffffff; /* #7a4d1f #4d4d00 */
+	color: #000000;
+	font-size: 75%;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.signup_button
+{
+	float: right;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	line-height: 2em;
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 75%;
+	text-decoration: none;
+}
+
+.signup_table
+{
+	margin-bottom: 10px;
+}
+
+.event_cost
+{
+	width: 15%;
+}
+
+.signup_div
+{
+	display: inline;
+	width: 80%;
+	line-height: 3em;
+	margin-bottom: 10px;
+}
+
+.small_td
+{
+	width: 10%;
+}
+
+.old_event
+{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.old_event thead
+{
+	background-color: #ffffff;
+}
+
+.old_event .event_button
+{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.closed_button
+{
+	float: right;
+	border: solid #000000 1px;
+	border-radius: 3px;
+	padding: 5px;
+	line-height: 2em;
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 75%;
+	text-decoration: none;
+}
+
+/*****************************
+	Print Footer Styles
+*****************************/
+
+#footer
+{
+	/*height: 10%;*/
+	height: 60px;
+	width: 100%;
+	background-color: #ffffff;
+	border-top: solid #000000 2px;
+}
+
+#footer_nav, #closing
+{
+	text-align: center;
+}
+
+#footer_nav a:link, #footer_nav a:visited
+{
+	text-decoration: none;
+	color:#000000;
+	padding: 5px;
+	display: inline;
+}
+
+}
