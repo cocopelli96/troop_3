@@ -283,11 +283,12 @@ h1
 
 #login_content
 {
-	position: relative;
-	/*top: 25%;*/
-	top: 100px;
+	/*position: relative;
+	/*top: 25%;*
+	top: 100px;*/
 	width: 25%;
 	margin: auto;
+	margin-top: 100px;
 }
 
 #login_form table
@@ -482,20 +483,22 @@ h1
 
 #add_form
 {
-	position: relative;
-	/*top: 25%;*/
-	top: 100px;
+	/*position: relative;
+	/*top: 25%;*
+	top: 100px;*/
 	width: 50%;
 	margin: auto;
+	margin-top: 100px;
 }
 
 #add_content
 {
-	position: relative;
-	/*top: 25%;*/
-	top: 100px;
+	/*position: relative;
+	/*top: 25%;*
+	top: 100px;*/
 	width: 40%;
 	margin: auto;
+	margin-top: 100px;
 }
 
 #return
@@ -1092,11 +1095,12 @@ text-decoration: none;
 
 #login_content
 {
-	position: relative;
-	/*top: 25%;*/
-	top: 100px;
+	/*position: relative;
+	/*top: 25%;*
+	top: 100px;*/
 	width: 40%;
 	margin: auto;
+	margin-top: 100px;
 }
 
 #login_form table
@@ -1291,20 +1295,22 @@ text-decoration: none;
 
 #add_form
 {
-	position: relative;
-	/*top: 25%;*/
-	top: 100px;
+	/*position: relative;
+	/*top: 25%;*
+	top: 100px;*/
 	width: 60%;
 	margin: auto;
+	margin-top: 100px;
 }
 
 #add_content
 {
-	position: relative;
-	/*top: 25%;*/
-	top: 100px;
+	/*position: relative;
+	/*top: 25%;
+	top: 100px;*/
 	width: 60%;
 	margin: auto;
+	margin-top: 100px;
 }
 
 #return
