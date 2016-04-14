@@ -77,7 +77,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM permission";
+	$sql = "SELECT * FROM Permission";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -109,7 +109,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM scout";
+	$sql = "SELECT * FROM Scout";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {

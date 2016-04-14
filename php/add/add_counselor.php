@@ -37,7 +37,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM badges ORDER BY badge_id";
+	$sql = "SELECT * FROM Badges ORDER BY badge_id";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -72,7 +72,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT sid, concat(sfn, ' ', sln) as name, pname, rank_title FROM scout, rank, patrol WHERE patrol.patrol_id = scout.patrol_id and rank.rank_id = scout.rank_id ORDER BY sid";
+	$sql = "SELECT sid, concat(sfn, ' ', sln) as name, pname, rank_title FROM Scout, Rank, Patrol WHERE Patrol.patrol_id = Scout.patrol_id and Rank.rank_id = Scout.rank_id ORDER BY sid";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
