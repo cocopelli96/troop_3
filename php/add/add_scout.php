@@ -109,7 +109,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM rank";
+	$sql = "SELECT * FROM Rank";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -141,7 +141,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM leadershipposition";
+	$sql = "SELECT * FROM LeadershipPosition";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
@@ -173,7 +173,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql = "SELECT * FROM patrol";
+	$sql = "SELECT * FROM Patrol";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
