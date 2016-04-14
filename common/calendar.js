@@ -127,12 +127,19 @@ function nextMonth() {
 
 function scoutMeetings() {
 	var rows = document.getElementById('calendar').childNodes[1].childNodes;
+	var count = 0;
 	for (i = 0; i < rows.length; i++)
 	{
 		var td = rows[i].childNodes[0];
 		if (td.id != '')
 		{
+			if (count == 0)
+			{
+				td.innerHTML += '<span style=\"display:block;font-size: 80%;\">&bull; PLC</span>';
+				td.innerHTML += '<span style=\"display:block;font-size: 80%;\">&bull; Committee Meeting</span>';
+			}
 			td.innerHTML += '<span style=\"display:block;font-size: 80%;\">&bull; Scout Meeting</span>';
+			count++;
 		}
 	}
 }
