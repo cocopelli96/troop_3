@@ -43,7 +43,6 @@ else
 }
 $current_month = intval(date_format(date_create(), "m"));
 $current_day = intval(date_format(date_create(), "d"));
-$current_day--;
 $current_year = intval(date_format(date_create(), "Y"));
 $month_next = $month + 1;
 $year_next = $year;
@@ -59,6 +58,7 @@ if ($month_previous < 1)
 	$month_previous = 12;
 	$year_previous--;
 }
+
 $months = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 
 echo "
@@ -208,7 +208,7 @@ else
 					while($row1 = $result1->fetch_assoc()) {
 						if ($row["event_id"] == $row1["event_id"])
 						{
-							if ($current_day > intval(substr($row["end_date"],8,2)) and $current_month == intval(substr($row["end_date"],5,2)) and $current_year == intval(substr($row["end_date"],0,4)))
+							if ($current_day > intval(substr($row1["end_signup"],8,2)) and $current_month == intval(substr($row1["end_signup"],5,2)) and $current_year == intval(substr($row1["end_signup"],0,4)))
 							{
 								echo "
 								<tr>
@@ -223,10 +223,22 @@ else
 								echo ">
 										<div style='float:left; width: 75%; line-height: 2em;'>" .date_format(date_create($row1["end_signup"]), "F d, Y h:i A")."</div>
 										<button class='closed_button'>Closed</button>
-									</td>
+									</td>";	
+									
+								if ($perm_level == 4)
+								{
+									echo "<td>
+											<form name='attendant_form' action='attendants.php' method='post'>
+											<input type='text' name='event_id' id='event_id' value='" . $row1["event_id"] ."' style='display:none;'>
+											<button type='submit' class='closed_button'>Attendants</button>
+										</form>
+									</td>";
+								}
+								
+								echo "
 								</tr>";
 							}
-							else if ($current_month > intval(substr($row["end_date"],5,2)) and $current_year == intval(substr($row["end_date"],0,4)))
+							else if ($current_month > intval(substr($row1["end_signup"],5,2)) and $current_year == intval(substr($row1["end_signup"],0,4)))
 							{
 								echo "
 								<tr>
@@ -256,7 +268,7 @@ else
 								echo "
 								</tr>";
 							}
-							else if ($current_year > intval(substr($row["end_date"],0,4)))
+							else if ($current_year > intval(substr($row1["end_signup"],0,4)))
 							{
 								echo "
 								<tr>
