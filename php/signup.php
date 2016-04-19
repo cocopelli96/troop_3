@@ -13,7 +13,7 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <div id='edit_content' class='layer'>
@@ -29,6 +29,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//detemrine if the current user's account is connected to a scout
 	if(isset($_COOKIE["username"]))
 	{
 		$sql = "SELECT uid, uname, pass, perm_id FROM UserAccount";
@@ -63,6 +64,8 @@ else
 }
 $conn->close();
 
+//if user account is connected to a scout allow them to register or unregister for event
+//else tell them they are not conencted to a scout
 if ($scout > 0)
 {
 	// Create connection to database
@@ -118,6 +121,7 @@ echo "
 </div>
 <a id='return' href='events.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

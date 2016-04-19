@@ -1,3 +1,4 @@
+<!--//header for the home page-->
 <!DOCTYPE html>
 <html>
 <head>

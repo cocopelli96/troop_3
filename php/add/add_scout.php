@@ -13,7 +13,7 @@ include("../../include/header_2.inc");
 include("../../include/banner_3.inc");
 include("../../include/navbar_3.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <div id='edit_content' class='layer'>
@@ -109,6 +109,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find allow ranks a scout can have
 	$sql = "SELECT * FROM Rank";
 	$result = $conn->query($sql);
 
@@ -141,6 +142,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find all leadership positions a scout can have
 	$sql = "SELECT * FROM LeadershipPosition";
 	$result = $conn->query($sql);
 
@@ -173,6 +175,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find all patrols a scout may be in
 	$sql = "SELECT * FROM Patrol";
 	$result = $conn->query($sql);
 
@@ -199,6 +202,7 @@ echo "
 </div>
 <a id='return' href='../roster_manage.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

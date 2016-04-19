@@ -15,7 +15,7 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%; float:left;'>Event Attendants</h1>";
@@ -33,6 +33,7 @@ if ($conn->connect_error)
 }
 else
 {
+	//find the event that has been selected by the user
 	$sql = "SELECT * FROM Event ORDER BY event_id;";
 	$result = $conn->query($sql);
 
@@ -41,6 +42,7 @@ else
 		while($row = $result->fetch_assoc()) {
 			if ($row["event_id"] == $_POST["event_id"])
 			{
+				//start table structure
 				echo "<table class='table signup_table'>
 					<thead>
 						<tr>
@@ -49,6 +51,7 @@ else
 					</thead>
 					<tbody>";
 				
+				//find scouts attending the event
 				$sql1 = "SELECT * FROM Attendant WHERE event_id = ".$row["event_id"];
 				$result1 = $conn->query($sql1);
 
@@ -98,6 +101,7 @@ else
 						}
 					}
 					
+					//if no scouts were found attending this event alert the user
 					if ($filled == false)
 					{
 						echo "<tr><td>There are no scouts attending this event.</td></tr>";
@@ -107,7 +111,8 @@ else
 				{
 					echo "<tr><td>There are no scouts attending this event.</td></tr>";
 				}
-					
+				
+				//end table structure
 				echo "
 					</tbody>
 				</table>";
@@ -119,6 +124,7 @@ else
 echo "
 <a id='return' href='events.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

@@ -13,6 +13,7 @@ include("../../include/header_2.inc");
 include("../../include/banner_3.inc");
 include("../../include/navbar_3.inc");
 
+//main content start
 echo "<div id='main'>
 <div id='edit_content' class='layer'>
 <h1>Edit Scout</h1>
@@ -27,6 +28,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find selected scout
 	$sql = "SELECT Scout.sid, sfn, sln, aid, street, city, state, zip, lead_id, rank_id, patrol_id FROM Scout, Address WHERE Scout.sid = Address.sid;";
 	$result = $conn->query($sql);
 
@@ -94,6 +96,7 @@ else
 				<td>
 					<input type='textbox' name='phone1' id='phone1' ";
 	
+		//find scout's contact
 		$sql1 = "SELECT sid, cid, contact_val FROM scoutcontact WHERE sid = ".$row["sid"]." and cid = 111";
 		$result1 = $conn->query($sql1);
 
@@ -114,6 +117,7 @@ else
 				<td>
 					<input type='textbox' name='phone2' id='phone2' ";
 	
+		//find scout's contact
 		$sql1 = "SELECT sid, cid, contact_val FROM scoutcontact WHERE sid = ".$row["sid"]." and cid = 222";
 		$result1 = $conn->query($sql1);
 
@@ -134,6 +138,7 @@ else
 				<td>
 					<input type='textbox' name='email' id='email' ";
 	
+		//find scout's contact
 		$sql1 = "SELECT sid, cid, contact_val FROM scoutcontact WHERE sid = ".$row["sid"]." and cid = 333";
 		$result1 = $conn->query($sql1);
 
@@ -155,6 +160,7 @@ else
 					<select name='rank' id='rank'>
 						<option value='none'>Select a Rank</option>";
 	
+		//find all ranks scout can have
 		$sql1 = "SELECT * FROM Rank";
 		$result1 = $conn->query($sql1);
 
@@ -183,6 +189,7 @@ else
 					<select name='leadership' id='leadership'>
 						<option value='none'>Select a Leadership Position</option>";
 	
+		//find all leadership positions scout can have
 		$sql1 = "SELECT * FROM LeadershipPosition";
 		$result1 = $conn->query($sql1);
 
@@ -211,6 +218,7 @@ else
 					<select name='patrols' id='patrols'>
 						<option value='none'>Select a Patrol</option>";
 	
+		//find all patrols scout can be in
 		$sql1 = "SELECT * FROM Patrol";
 		$result1 = $conn->query($sql1);
 
@@ -254,6 +262,7 @@ echo "
 </div>
 <a id='return' href='../roster_manage.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

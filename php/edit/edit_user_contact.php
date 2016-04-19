@@ -13,6 +13,7 @@ include("../../include/header_2.inc");
 include("../../include/banner_3.inc");
 include("../../include/navbar_3.inc");
 
+//main content start
 echo "<div id='main'>
 <div id='edit_content' class='layer'>
 <h1>Edit User Contact</h1>
@@ -27,6 +28,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find user contacts
 	$sql = "SELECT * FROM UserAccount;";
 	$result = $conn->query($sql);
 
@@ -101,6 +103,7 @@ echo "
 </div>
 <a id='return' href='../account.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

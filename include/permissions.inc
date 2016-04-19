@@ -1,3 +1,4 @@
+<!--determine the permission level of the current user-->
 <?php
 
 // Create connection to database

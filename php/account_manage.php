@@ -12,7 +12,7 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%; float:left;'>Account Manager</h1>
@@ -28,9 +28,7 @@ if ($conn->connect_error) {
 } 
 else
 {
-	$sql0 = "SELECT * FROM UserAccount, Permission where UserAccount.perm_id = Permission.perm_id ORDER BY uid;";
-	$result0 = $conn->query($sql0);
-
+	//begin table structure
 	echo "
 			<table border='2' class='table'>
 				<thead>
@@ -46,13 +44,19 @@ else
 					</tr>
 				</thead>
 				<tbody>";
+				
+	//search database for user accounts
+	$sql0 = "SELECT * FROM UserAccount, Permission where UserAccount.perm_id = Permission.perm_id ORDER BY uid;";
+	$result0 = $conn->query($sql0);
 	
+	//fill table with results of query
 	$filled = false;		
 	if ($result0->num_rows > 0) {
 		// output data of each row
 		while($row0 = $result0->fetch_assoc()) {
 			$filled = true;
 
+			//fill table with user information
 			echo "
 			<tr>
 				<td>".$row0["uname"]."</td>
@@ -60,6 +64,7 @@ else
 				<td>".$row0["perm_title"]."</td>
 				<td>";
 		
+			//retrieve user phone number
 			$sql2 = "SELECT * FROM AccountContact WHERE AccountContact.uid = ".$row0["uid"]." and AccountContact.contact_id = 22";
 			$result2 = $conn->query($sql2);
 
@@ -79,6 +84,7 @@ else
 	
 			echo "</td><td>";
 		
+			//retrieve user email address
 			$sql2 = "SELECT * FROM AccountContact WHERE AccountContact.uid = ".$row0["uid"]." and AccountContact.contact_id = 11";
 			$result2 = $conn->query($sql2);
 
@@ -98,6 +104,7 @@ else
 		
 			echo "</td><td>";
 		
+			//retrieve scout connected to user account
 			$sql2 = "SELECT * FROM UserScout WHERE UserScout.uid = ".$row0["uid"];
 			$result2 = $conn->query($sql2);
 
@@ -136,6 +143,7 @@ else
 				echo "User is not connected to a scout.";
 			}
 	
+			//populate with buttons to edit and delete records
 			echo "</td>
 				<td style='min-width:auto;'>
 					<form name='edit_user_form' action='./edit/edit_user_full.php' method='post'>
@@ -153,6 +161,7 @@ else
 
 		}
 	
+		//if there was no data to fill the table alert the user
 		if ($filled == false)
 		{
 			echo "<tr><td colspan='8'>There are no users at this time.</td><tr>";
@@ -161,6 +170,7 @@ else
 		echo "<tr><td colspan='8'>There are no users at this time.</td><tr>";
 	}
 
+	//end table structure
 	echo "
 	</tbody>
 	</table>";
@@ -169,6 +179,7 @@ $conn->close();
 
 echo "</div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

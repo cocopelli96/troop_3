@@ -16,11 +16,12 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%; float:left;'>Merit Badges</h1>";
 
+//if user has adultadmin permission levels allow them to add new counselors and badges
 if ($perm_level == 4)
 {
 	echo "<a class='edit_button' href='./add/add_counselor.php'>Add Counselor</a>
@@ -38,6 +39,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find merit badges that can be taught by counselors
 	$sql0 = "SELECT counselor.badge_id, badge_name FROM counselor, Badges WHERE counselor.badge_id = Badges.badge_id GROUP BY badge_id ORDER BY badge_id;";
 	$result0 = $conn->query($sql0);
 
@@ -47,6 +49,7 @@ else
 
 			echo "<h2 class='table_head'>".$row0["badge_name"]."</h2>";
 		
+			//if user has adultadmin permission allow them to delete a badge
 			if ($perm_level == 4)
 			{
 				echo "<form name='delete_full_badge_form' action='./delete/delete_badge.php' method='post' onsubmit='return confirmDelete(\"badge\");'>
@@ -73,6 +76,7 @@ else
 				</thead>
 				<tbody>";
 
+			//find counselors who can teach the merit badge
 			$sql = "SELECT badge_id, Scout.sid, concat(sfn, ' ', sln) as name, concat(street, ' ', city, ', ', state, ' ', zip) as address FROM Scout, Address, counselor WHERE Scout.sid = Address.sid and Scout.sid = counselor.sid ORDER BY badge_id;";
 			$result = $conn->query($sql);
 
@@ -89,6 +93,7 @@ else
 							<td>".$row["address"]."</td>
 							<td>";
 			
+						//get counselor's phone numbers
 						$sql2 = "SELECT sid, contact.cid, contact_val, con_descript FROM scoutcontact, contact WHERE contact.cid = scoutcontact.cid and (scoutcontact.cid = 111 or scoutcontact.cid = 222);";
 						$result2 = $conn->query($sql2);
 
@@ -108,6 +113,7 @@ else
 		
 						echo "</td><td>";
 			
+						//get counselor's email address
 						$sql2 = "SELECT sid, cid, contact_val FROM scoutcontact WHERE scoutcontact.cid = 333;";
 						$result2 = $conn->query($sql2);
 
@@ -127,6 +133,7 @@ else
 		
 						echo "</td>";
 		
+						//if user has adultadmin permissions allow them to delete the counselor
 						if ($perm_level == 4)
 						{
 							echo "
@@ -143,6 +150,7 @@ else
 					}
 				}
 	
+				//if there were no counselors found alert the user
 				if ($filled == false)
 				{
 					echo "<tr><td colspan='4'>There are no merit badge counselors at this time.</td><tr>";
@@ -161,6 +169,7 @@ $conn->close();
 
 echo "</div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

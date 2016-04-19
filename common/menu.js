@@ -1,3 +1,6 @@
+//this file holds the javascript for the dynamic menues
+
+//function to toggle between menues
 function toggleMenu(id) {
 	var gallery = document.getElementById("gallery").style;
 	var roster = document.getElementById("roster").style;
@@ -23,6 +26,7 @@ function toggleMenu(id) {
 	}
 }
 
+//function to toggle menu display property
 function displayMenu(id) {
 	var menu = document.getElementById(id).style;
 	

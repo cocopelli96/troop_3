@@ -29,6 +29,7 @@ echo "
 </div>
 <a id='return' href='../downloads.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

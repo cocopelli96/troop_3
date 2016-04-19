@@ -9,6 +9,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//determine if user is in the database and if the given password matches
 	$sql = "SELECT uid, uname, pass FROM UserAccount";
 	$result = $conn->query($sql);
 
@@ -46,7 +47,7 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <div id='login_content' class='layer'>
@@ -54,6 +55,7 @@ echo "
 " . $text . "
 </div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

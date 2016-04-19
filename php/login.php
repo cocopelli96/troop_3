@@ -12,7 +12,7 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <div id='login_content' class='layer'>
@@ -48,6 +48,7 @@ echo "
 
 </div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

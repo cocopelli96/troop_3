@@ -12,7 +12,7 @@ include("./include/header_2.inc");
 include("./include/banner.inc");
 include("./include/navbar.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1>Welcome to Troop 3</h1>
@@ -36,6 +36,7 @@ echo "
 	</table>
 </div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("./include/footer_1.inc");

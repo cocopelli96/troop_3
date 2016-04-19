@@ -12,6 +12,7 @@ include("../../include/header_2.inc");
 include("../../include/banner_3.inc");
 include("../../include/navbar_3.inc");
 
+//main content start
 echo "<div id='main'>
 <div id='add_content' class='layer'>";
 
@@ -39,11 +40,13 @@ else
 		}
 	}
 
+	//upload user
 	$sql = "INSERT INTO UserAccount VALUES(".$uid.",'".$_POST["uname"]."','".$_POST["pass"]."',".$_POST["permission"].")";
 	$result = $conn->query($sql);
 	
 	echo "The user ".$_POST["uname"]." ".$_POST["permission"]." has been uploaded.";
 	
+	//upload user contact
 	if (isset($_POST["phone"]) and !empty($_POST["phone"]))
 	{
 		$sql = "INSERT INTO AccountContact VALUES(".$uid.",22,'".$_POST["phone"]."')";
@@ -52,6 +55,7 @@ else
 		echo "The home phone number ".$_POST["phone"]." has been uploaded.";
 	}
 	
+	//upload user contact
 	if (isset($_POST["email"]) and !empty($_POST["email"]))
 	{
 		$sql = "INSERT INTO AccountContact VALUES(".$uid.",11,'".$_POST["email"]."')";
@@ -60,6 +64,7 @@ else
 		echo "The email ".$_POST["email"]." has been uploaded.";
 	}
 	
+	//upload user scout connection
 	if (isset($_POST["scout"]) and !empty($_POST["scout"]) and $_POST["scout"] != "none")
 	{
 		$sql = "INSERT INTO UserScout VALUES(".$uid.",".$_POST["scout"].")";
@@ -75,6 +80,7 @@ echo "
 </div>
 <a id='return' href='../account_manage.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

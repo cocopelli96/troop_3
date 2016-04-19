@@ -12,6 +12,7 @@ include("../../include/header_2.inc");
 include("../../include/banner_3.inc");
 include("../../include/navbar_3.inc");
 
+//main content start
 echo "<div id='main'>
 <div id='edit_content' class='layer'>
 <h1>Edit User</h1>";
@@ -25,6 +26,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//edit user
 	$sql = "SELECT * FROM UserAccount;";
 	$result = $conn->query($sql);
 
@@ -61,6 +63,7 @@ else
 					}
 				}
 			
+				//edit user's contact
 				$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$_POST["uid"]." and contact_id = 22";
 				$result1 = $conn->query($sql1);
 			
@@ -91,6 +94,7 @@ else
 					echo "Create user phone.";
 				}
 			
+				//edit user's contact
 				$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$_POST["uid"]." and contact_id = 11";
 				$result1 = $conn->query($sql1);
 
@@ -121,6 +125,7 @@ else
 					echo "Create user email.";
 				}
 	
+				//edit scout connected to user
 				$sql1 = "SELECT * FROM UserScout WHERE uid = ".$_POST["uid"];
 				$result1 = $conn->query($sql1);
 
@@ -167,6 +172,7 @@ echo "
 </div>
 <a id='return' href='../account_manage.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

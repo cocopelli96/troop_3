@@ -15,11 +15,12 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%;float:left;'>PLC Notes</h1>";
 
+//if user permission level webmaster or adultadmin allow them to edit PLC Notes
 if ($perm_level > 2)
 {
 	echo "<a class='edit_button' href='./edit/edit_plc_notes.php'>Edit Notes</a>";
@@ -45,6 +46,7 @@ fclose($notes);
 echo "
 </div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

@@ -12,12 +12,12 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
+//main content start
 echo "<div id='main'>
 <h1>" . $_POST["articleTitle"] . "</h1>
 <div id='open_article' class='layer'>";
 
-//begin upload code
-//bored upload code setup from w3school.com
+//open file if exists
 $target_file = $_POST["fileToOpen"];
 $uploadOk = 1;
 // Check if file already exists
@@ -39,6 +39,7 @@ echo "
 </div>
 <a id='article_return' href='articles.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

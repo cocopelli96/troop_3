@@ -13,6 +13,7 @@ include("../../include/header_2.inc");
 include("../../include/banner_3.inc");
 include("../../include/navbar_3.inc");
 
+//main content start
 echo "<div id='main'>
 <div id='edit_content' class='layer'>
 <h1>Edit User</h1>
@@ -27,6 +28,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find selected scout
 	$sql = "SELECT * FROM UserAccount, Permission WHERE Permission.perm_id = UserAccount.perm_id;";
 	$result = $conn->query($sql);
 
@@ -70,6 +72,7 @@ else
 				<td>
 					<input type='textbox' name='phone' id='phone' ";
 	
+		//find user's contact
 		$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$row["uid"]." and contact_id = 22";
 		$result1 = $conn->query($sql1);
 
@@ -90,6 +93,7 @@ else
 				<td>
 					<input type='textbox' name='email' id='email' ";
 	
+		//find user's contact
 		$sql1 = "SELECT * FROM AccountContact WHERE uid = ".$row["uid"]." and contact_id = 11";
 		$result1 = $conn->query($sql1);
 
@@ -111,6 +115,7 @@ else
 					<select name='permission' id='permission'>
 						<option value='none'>Select a Permission Level</option>";
 	
+		//find user's permission level
 		$sql1 = "SELECT * FROM Permission";
 		$result1 = $conn->query($sql1);
 
@@ -147,7 +152,7 @@ else
 					<select name='scout' id='scout'>
 						<option value='none'>Select a Scout</option>";
 	
-	
+			//find scout connected to user
 			$sql1 = "SELECT * FROM UserScout";
 			$result1 = $conn->query($sql1);
 
@@ -210,6 +215,7 @@ echo "
 </div>
 <a id='return' href='../account_manage.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

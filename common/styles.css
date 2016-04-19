@@ -51,9 +51,7 @@ h1
 	position: absolute;
 	left: 2px;
 	top: 0%;
-	/*height: 10%;*/
 	height: 80px;
-	/*width: 10%;*/
 	width: 90px;
 }
 
@@ -91,7 +89,6 @@ h1
 	border-top: solid #000000 2px;
 	border-bottom: solid #000000 2px;
 	width: 100%;
-	/*height: 5%;*/
 	height: 2em;
 	background-color: #808000;
 	text-align: center;
@@ -112,7 +109,6 @@ h1
 {
 	position: absolute;
 	display: none;
-	/*top: 15.55%;*/
 	top: 116px;
 }
 
@@ -169,12 +165,9 @@ h1
 
 #main
 {
-	/*height: 75%;*/
 	min-height: 83%;
-	/*width: 100%;*/
 	width: 99%;
 	padding: 5px;
-	/*overflow-y: auto;*/
 	background-color: #CD853F;
 }
 
@@ -283,9 +276,6 @@ h1
 
 #login_content
 {
-	/*position: relative;
-	/*top: 25%;*
-	top: 100px;*/
 	width: 25%;
 	margin: auto;
 	margin-top: 100px;
@@ -329,7 +319,6 @@ h1
 
 #calendar tbody td
 {
-	/*height: 20%;*/
 	height: 70px;
 }
 
@@ -483,9 +472,6 @@ h1
 
 #add_form
 {
-	/*position: relative;
-	/*top: 25%;*
-	top: 100px;*/
 	width: 50%;
 	margin: auto;
 	margin-top: 100px;
@@ -493,9 +479,6 @@ h1
 
 #add_content
 {
-	/*position: relative;
-	/*top: 25%;*
-	top: 100px;*/
 	width: 40%;
 	margin: auto;
 	margin-top: 100px;
@@ -503,11 +486,6 @@ h1
 
 #return
 {
-	/* 
-position: absolute;
-	bottom: 10%;
-	right: 1%;
- */
 	float: right;
 	margin: 10px 10px 10px 0;
 	border: solid #000000 1px;
@@ -772,7 +750,6 @@ position: absolute;
 
 #footer
 {
-	/*height: 10%;*/
 	height: 60px;
 	width: 100%;
 	background-color: #808000;
@@ -837,7 +814,6 @@ h1
 	font-size: 150%;
 	text-align: center;
 	vertical-align: middle;
-	/*height: 10%;*/
 	min-height: 146px;
 }
 
@@ -847,15 +823,11 @@ h1
 	left: 2px;
 	top: 0%;
 	min-height: 140px;
-	/*height: 10%;*/
 	width: 15%;
 }
 
 #login
 {
-	/*position: absolute;
-	right: 2px;
-	top: 7%;*/
 	float: right;
 }
 
@@ -885,7 +857,7 @@ h1
 {
 	border-top: solid #000000 2px;
 	border-bottom: solid #000000 2px;
-	width: 100%;	/*height: 5%;*/
+	width: 100%;
 	height: 2em;
 	background-color: #808000;
 	text-align: center;
@@ -907,7 +879,6 @@ h1
 {
 	position: absolute;
 	display: none;
-	/*top: 13.3%;*/
 	top: 198px;
 }
 
@@ -947,32 +918,15 @@ h1
 	border-right: solid #000000 2px;
 }
 
-#navbar .dropdown:link, #navbar .dropdown:visited
-{
-	/*display: none;*/
-}
-
 .not_link
 {
-	
-text-decoration: none;
+	text-decoration: none;
 	display: inline;
 	color: #aaaaaa;
 	vertical-align:middle;
 	border-left: solid #000000 2px;
 	line-height: 2em;
 	padding: 5px;
- /*
-	text-decoration: none;
-	display: block;
-	color: #aaaaaa;
-	background-color: #808000;
-	vertical-align: middle;
-	border-left: solid #000000 2px;
-	border-right: solid #000000 2px;
-	border-bottom: solid #000000 2px;
-	line-height: 2em;
-	padding: 5px;*/
 }
 
 /************************************
@@ -981,9 +935,7 @@ text-decoration: none;
 
 #main
 {
-	/*height: 75%;*/
 	min-height: 83%;
-	/*width: 100%;*/
 	width: 99%;
 	padding: 5px;
 	overflow-x: auto;
@@ -1096,9 +1048,6 @@ text-decoration: none;
 
 #login_content
 {
-	/*position: relative;
-	/*top: 25%;*
-	top: 100px;*/
 	width: 40%;
 	margin: auto;
 	margin-top: 100px;
@@ -1144,7 +1093,6 @@ text-decoration: none;
 #calendar tbody td
 {
 	height: 140px;
-	/*height: 70px;*/
 }
 
 #cal_div
@@ -1297,9 +1245,6 @@ text-decoration: none;
 
 #add_form
 {
-	/*position: relative;
-	/*top: 25%;*
-	top: 100px;*/
 	width: 60%;
 	margin: auto;
 	margin-top: 100px;
@@ -1307,9 +1252,6 @@ text-decoration: none;
 
 #add_content
 {
-	/*position: relative;
-	/*top: 25%;
-	top: 100px;*/
 	width: 60%;
 	margin: auto;
 	margin-top: 100px;
@@ -1317,11 +1259,6 @@ text-decoration: none;
 
 #return
 {
-	/* 
-position: absolute;
-	bottom: 10%;
-	right: 1%;
- */
 	float: right;
 	margin: 10px 10px 10px 0;
 	border: solid #000000 1px;
@@ -1470,7 +1407,7 @@ position: absolute;
 	border-radius: 3px;
 	padding: 5px;
 	line-height: 2em;
-	background-color: #7a4d1f; /* #7a4d1f #4d4d00 */
+	background-color: #7a4d1f; 
 	color: #ffffcc;
 	font-size: 75%;
 	text-decoration: none;
@@ -1483,7 +1420,7 @@ position: absolute;
 	border-radius: 3px;
 	padding: 5px;
 	line-height: 2em;
-	background-color: #7a4d1f; /* #7a4d1f #4d4d00 */
+	background-color: #7a4d1f; 
 	color: #ffffcc;
 	font-size: 75%;
 	text-decoration: none;
@@ -1507,7 +1444,7 @@ position: absolute;
 	border-radius: 3px;
 	padding: 5px;
 	line-height: 2em;
-	background-color: #7a4d1f; /* #7a4d1f #4d4d00 */
+	background-color: #7a4d1f;
 	color: #ffffcc;
 	font-size: 75%;
 	text-decoration: none;
@@ -1587,7 +1524,6 @@ position: absolute;
 
 #footer
 {
-	/*height: 10%;*/
 	min-height: 110px;
 	width: 100%;
 	background-color: #808000;
@@ -1652,7 +1588,6 @@ h1
 {
 	font-size: 150%;
 	text-align: center;
-	/*height: 10%;*/
 	min-height: 80px;
 }
 
@@ -1661,9 +1596,7 @@ h1
 	position: absolute;
 	left: 2px;
 	top: 0%;
-	/*height: 10%;*/
 	height: 80px;
-	/*width: 10%;*/
 	width: 90px;
 }
 
@@ -1701,7 +1634,6 @@ h1
 	border-top: solid #000000 2px;
 	border-bottom: solid #000000 2px;
 	width: 100%;
-	/*height: 5%;*/
 	height: 2em;
 	background-color: #ffffff;
 	text-align: center;
@@ -1722,7 +1654,6 @@ h1
 {
 	position: absolute;
 	display: none;
-	/*top: 15.55%;*/
 	top: 116px;
 }
 
@@ -1779,12 +1710,9 @@ h1
 
 #main
 {
-	/*height: 75%;*/
 	min-height: 75%;
-	/*width: 100%;*/
 	width: 99%;
 	padding: 5px;
-	/*overflow-y: auto;*/
 	background-color: #ffffff;
 }
 
@@ -1893,9 +1821,6 @@ h1
 
 #login_content
 {
-	/*position: relative;
-	/*top: 25%;*
-	top: 100px;*/
 	width: 25%;
 	margin: auto;
 	margin-top: 100px;
@@ -1939,7 +1864,6 @@ h1
 
 #calendar tbody td
 {
-	/*height: 20%;*/
 	height: 70px;
 }
 
@@ -2093,9 +2017,6 @@ h1
 
 #add_form
 {
-	/*position: relative;
-	/*top: 25%;*
-	top: 100px;*/
 	width: 50%;
 	margin: auto;
 	margin-top: 100px;
@@ -2103,9 +2024,6 @@ h1
 
 #add_content
 {
-	/*position: relative;
-	/*top: 25%;*
-	top: 100px;*/
 	width: 40%;
 	margin: auto;
 	margin-top: 100px;
@@ -2113,11 +2031,6 @@ h1
 
 #return
 {
-	/* 
-position: absolute;
-	bottom: 10%;
-	right: 1%;
- */
 	float: right;
 	margin: 10px 10px 10px 0;
 	border: solid #000000 1px;
@@ -2266,7 +2179,7 @@ position: absolute;
 	border-radius: 3px;
 	padding: 5px;
 	line-height: 2em;
-	background-color: #ffffff; /* #7a4d1f #4d4d00 */
+	background-color: #ffffff; 
 	color: #000000;
 	font-size: 75%;
 	text-decoration: none;
@@ -2279,7 +2192,7 @@ position: absolute;
 	border-radius: 3px;
 	padding: 5px;
 	line-height: 2em;
-	background-color: #ffffff; /* #7a4d1f #4d4d00 */
+	background-color: #ffffff; 
 	color: #000000;
 	font-size: 75%;
 	text-decoration: none;
@@ -2303,7 +2216,7 @@ position: absolute;
 	border-radius: 3px;
 	padding: 5px;
 	line-height: 2em;
-	background-color: #ffffff; /* #7a4d1f #4d4d00 */
+	background-color: #ffffff; 
 	color: #000000;
 	font-size: 75%;
 	text-decoration: none;

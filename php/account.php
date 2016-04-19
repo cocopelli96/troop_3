@@ -16,12 +16,13 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 id='head' style='width:50%; float:left;'>User Account</h1>
 ";
 		
+//if user has adultadmin user permissions allow them to go to account management page
 if ($perm_level == 4)
 {
 	echo "<a class='edit_button' href='account_manage.php'>Manage Accounts</a>";
@@ -36,6 +37,11 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//start table structure
+	echo "<table id='account' class='table'>
+			<tbody>";
+			
+	//search database for current user account
 	$sql = "SELECT * FROM UserAccount, Permission where UserAccount.perm_id = Permission.perm_id ";
 	$result = $conn->query($sql);
 
@@ -44,11 +50,9 @@ else
 		while($row = $result->fetch_assoc()) {
 			if ($row["uname"] == $_COOKIE["username"])
 			{
+				//print current user's information
 				$uid = $row["uid"];
-				echo "
-				<table id='account' class='table'>
-					<tbody>
-						<tr>
+				echo "<tr>
 							<td>User Name:</td>
 							<td>".$row["uname"]."</td>
 							<td id='edit_user_td'></td>
@@ -73,6 +77,7 @@ else
 		}
 	}
 
+	//find contacts for current user
 	$sql = "SELECT * FROM AccountContact where uid = ". $uid;
 	$result = $conn->query($sql);
 
@@ -106,6 +111,7 @@ else
 		}
 	}
 
+	//find any scout connected to current user
 	$sql = "SELECT * FROM UserScout where uid = ". $uid;
 	$result = $conn->query($sql);
 
@@ -160,6 +166,7 @@ else
 		</tr>";
 	}
 
+	//end table structure
 	echo "
 		</tbody>
 	</table>
@@ -169,6 +176,7 @@ $conn->close();
 
 echo "
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

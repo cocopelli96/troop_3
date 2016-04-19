@@ -12,7 +12,7 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <div id='content' class='layer'>
@@ -35,6 +35,7 @@ with any part of the terms then you may not access the Service.</p>
 <p>If you have any questions about these Terms, please contact us.</p>
 </div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

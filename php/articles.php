@@ -16,11 +16,12 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%; float: left;'>Artilces</h1>";
 
+//if user has permission level of webmaster or adultadmin let them add articles
 if ($perm_level > 2)
 {
 	echo "
@@ -40,6 +41,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find any articles in the database
 	$sql = "SELECT fid, path, fname, file_type FROM Files, FileType WHERE Files.type_id = FileType.type_id";
 	$result = $conn->query($sql);
 
@@ -51,6 +53,7 @@ else
 			{
 				$filled = true;
 			
+				//display the article that was found
 				echo "
 				<tr>
 					<td>
@@ -64,6 +67,7 @@ else
 						</form>
 					</td>";
 		
+				//if user has webmaster or adultadmin permissions allow them to delete article from database
 				if ($perm_level > 2)
 				{
 					echo "
@@ -79,6 +83,7 @@ else
 			}
 		}
 	
+		//if no articles were found alert the user
 		if ($filled == false)
 		{
 			echo "<tr><td>There are no files at this time.</td><tr>";
@@ -92,6 +97,7 @@ $conn->close();
 echo "</tbody>
 </table>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

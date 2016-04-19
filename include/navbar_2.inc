@@ -1,3 +1,4 @@
+<!--//navigation for pages in the php folder-->
 <?php
 
 echo "

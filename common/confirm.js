@@ -1,7 +1,11 @@
+//this file has javascript code for use in confirming data in forms
+
+//confirm user wants to delete data
 function confirmDelete(name) {
 	return confirm("Do you really want to delete this " + name + "?");
 }
 
+//confirm data input of the contact us page form
 function form_val() {
 	//get values from form
 	var fn = document.contact_form.fn.value;
@@ -14,7 +18,7 @@ function form_val() {
 	var RegExpText = /^[A-Z a-z]+$/;
 	var RegExpEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 	
-	//conditions
+	//check the input
 	if (!RegExpText.test(fn))
 		{
 			alert("Please enter your first name");
@@ -50,6 +54,7 @@ function form_val() {
  	return true;
 }
 
+//confirm data input of forms for adding and editing scouts
 function scoutForm() {
 	//get values from form
 	var sfn = document.getElementById('sfn').value;
@@ -76,7 +81,7 @@ function scoutForm() {
 	var RegExpEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 	var RegExpIds = /^[0-9]+$/;
 	
-	//conditions
+	//check the input
 	if (!RegExpText.test(sfn))
 		{
 			alert("Please enter scout's first name");
@@ -165,6 +170,7 @@ function scoutForm() {
  	return true;
 }
 
+//confirm data input for user contact update form
 function userContact() {
 	//get values from form
 	var email = document.getElementById('email').value;
@@ -176,6 +182,7 @@ function userContact() {
 	///^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
 	var RegExpEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
+	//check the input
 	if (!(RegExpPhone.test(phone) && phone != "") && !(RegExpEmail.test(email) && email != ""))
 		{
 			alert("Please enter user's contact");
@@ -187,6 +194,7 @@ function userContact() {
  	return true;
 }
 
+//confirm data input for user password update form
 function userPassword() {
 	//get values from form
 	var pass = document.getElementById('pass').value;
@@ -196,6 +204,7 @@ function userPassword() {
 // / = start regexpression, ^ = start, [..] = valid input, + = repeat indefinitely, $ = to end of field, / = finish, \.- = literal period or hyphen, ? = can happen once, w = alphanumeric, * = zero or more, w{2,4} = limited space for characters
 	var RegExpPassword = /^[\S]+$/;
 
+	//check the input
 	if (!RegExpPassword.test(pass))
 		{
 			alert("Please enter user's password");
@@ -223,6 +232,7 @@ function userPassword() {
  	return true;
 }
 
+//confirm data input for user add and edit forms
 function userForm() {
 	//get values from form
 	var uname = document.getElementById('uname').value;
@@ -233,7 +243,7 @@ function userForm() {
 	var RegExpText = /^[\S]+$/;
 	var RegExpIds = /^[0-9]+$/;
 	
-	//conditions
+	//check the input
 	if (!RegExpText.test(uname))
 		{
 			alert("Please enter user name");
@@ -260,6 +270,7 @@ function userForm() {
  	return true;
 }
 
+//confirm data input for event add and edit forms
 function eventForm() {
 	//get values from form
 	var event_name = document.getElementById('event_name').value;
@@ -276,7 +287,7 @@ function eventForm() {
 	var RegExpCost = /^[0-9]+$/;
 	var RegExpDate = /^[0-1]{1}[0-9]{1}[-]{1}[0-3]{1}[0-9]{1}[-]{1}[0-9]{4}[\s]{1}[0-2]{1}[0-9]{1}[:]{1}[0-5]{1}[0-9]{1}[:]{1}[0-5]{1}[0-9]{1}$/;
 	
-	//conditions
+	//check the input
 	if (!RegExpText.test(event_name))
 		{
 			alert("Please enter event name");
@@ -336,6 +347,7 @@ function eventForm() {
  	return true;
 }
 
+//confirm data for the login page form
 function loginForm() {
 	//get values from form
 	var pass = document.getElementById('pass').value;
@@ -345,6 +357,7 @@ function loginForm() {
 // / = start regexpression, ^ = start, [..] = valid input, + = repeat indefinitely, $ = to end of field, / = finish, \.- = literal period or hyphen, ? = can happen once, w = alphanumeric, * = zero or more, w{2,4} = limited space for characters
 	var RegExpPassword = /^[\S]+$/;
 
+	//check the input
 	if (!RegExpPassword.test(uname))
 		{
 			alert("Please enter user name");
@@ -364,12 +377,15 @@ function loginForm() {
  	return true;
 }
 
+//confirm data for the photo uploading form
 function fileForm() {
 	//get values from form
 	var file = document.getElementById('fileToUpload').value;
 
+	//necessary regular expressions
 	var RegExpBlank = /^[\s]+$/;
 
+	//check the input
 	if (RegExpBlank.test(file) || file == "")
 		{
 			alert("Please select a file");
@@ -381,12 +397,15 @@ function fileForm() {
  	return true;
 }
 
+//confirm data for the article uploading form
 function articleForm() {
 	//get values from form
 	var name = document.getElementById('articleTitle').value;
 
+	//necessary regular expressions
 	var RegExpBlank = /^[\s]+$/;
 
+	//check the input
 	if (RegExpBlank.test(name) || name == "")
 		{
 			alert("Please enter a name for the article");
@@ -402,12 +421,15 @@ function articleForm() {
  	return true;
 }
 
+//confirm data for the file uploading form
 function downloadForm() {
 	//get values from form
 	var name = document.getElementById('fileName').value;
 
+	//necessary regular expressions
 	var RegExpBlank = /^[\s]+$/;
 
+	//check the input
 	if (RegExpBlank.test(name) || name == "")
 		{
 			alert("Please enter a name for the file");
@@ -423,12 +445,15 @@ function downloadForm() {
  	return true;
 }
 
+//confirm data input for the badge add form
 function badgeForm() {
 	//get values from form
 	var name = document.getElementById('badgeTitle').value;
 
+	//necessary regular expressions
 	var RegExpBlank = /^[\s]+$/;
 
+	//check the input
 	if (RegExpBlank.test(name) || name == "")
 		{
 			alert("Please enter a name for the badge");
@@ -440,12 +465,15 @@ function badgeForm() {
  	return true;
 }
 
+//confirm data input for the patrol add form
 function patrolForm() {
 	//get values from form
 	var name = document.getElementById('pname').value;
 
+	//necessary regular expressions
 	var RegExpBlank = /^[\s]+$/;
 
+	//check the input
 	if (RegExpBlank.test(name) || name == "")
 		{
 			alert("Please enter a name for the patrol");
@@ -457,12 +485,15 @@ function patrolForm() {
  	return true;
 }
 
+//confirm data input for the PLC Notes update form
 function notesForm() {
 	//get values from form
 	var notes = document.getElementById('notes').value;
 	
+	//necessary regular expressions
 	var RegExpBlank = /^[\s]+$/;
 
+	//check the input
 	if (RegExpBlank.test(notes) || notes == "")
 		{
 			alert("Please enter the PLC Notes");
@@ -474,11 +505,13 @@ function notesForm() {
  	return true;
 }
 
+//confirm data for the counselor add form
 function counselorForm() {
 	//get values from form
 	var badge = document.getElementById('badges').value;
 	var counselor = document.getElementById('adults').value;
 
+	//check the input
 	if (badge == "none")
 		{
 			alert("Please select a badge");

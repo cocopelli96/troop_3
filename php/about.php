@@ -12,7 +12,7 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1>About Us</h1>
@@ -23,6 +23,7 @@ echo "
 	<p>Any boy of the age of 11 having passed 5th grade can join the Troop 3 Burlington. Any person wanting to see a meeting can stop by during our troop meetings to see what we do and what scouting offers. Parents are encouraged to get involved but there is no obligation. Just one hour of scouting a week, can make a world of difference.</p>
 </div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

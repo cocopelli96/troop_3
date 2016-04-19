@@ -1,3 +1,4 @@
+<!--//footer for the page sin the add, edit, delete, and upload folders-->
 <div id="footer">
 	<div id="footer_nav">
 		<a href="../about.php">About Us</a>

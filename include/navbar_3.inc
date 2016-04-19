@@ -1,3 +1,4 @@
+<!--//navigation for the pages in the add, delete, edit, and upload folders-->
 <?php
 
 echo "

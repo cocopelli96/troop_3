@@ -13,11 +13,12 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1>Calendar</h1>";
 
+//get the month and year to display in the calendar and the current month and year
 if (isset($_POST["year"]) and !empty($_POST["year"]))
 {
 	$year = intval($_POST["year"]);
@@ -54,6 +55,7 @@ if ($month_previous < 1)
 }
 $months = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 
+//create month and year indication and control table and create calendar
 echo "
 	<table id='date_table' class='table'>
 		<thead>
@@ -92,6 +94,7 @@ if ($conn->connect_error)
 }
 else
 {
+	//get events to insert into calendar
 	$sql = "SELECT * FROM Event";
 	$result = $conn->query($sql);
 	
@@ -141,6 +144,7 @@ else
 }
 
 echo "</div></div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

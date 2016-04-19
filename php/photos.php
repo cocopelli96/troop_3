@@ -16,11 +16,12 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%; float: left;'>Photo Gallery</h1>";
 
+//if user has permission level of webmaster or adultadmin allow them to add photos
 if ($perm_level > 2)
 {
 	echo "<a id='add_file' href='./add/add_photo.php'>Add Photo</a>";
@@ -31,62 +32,6 @@ echo "
 	<tbody>
 ";
 
-// //pull in gallery
-// $count = 0;
-// $row = 0;
-// $gallery = fopen("../files/gallery.txt", "r");
-// while (!feof($gallery))
-// {
-// 	$file = fgets($gallery);
-// 	if (($file == "" || $file == " " || $file == "\n") && $count > 0)
-// 	{
-// 		echo "</tr>";
-// 		break;
-// 	}
-// 	else if (($file == "" || $file == " " || $file == "\n") && $row != 0)
-// 	{
-// 		break;
-// 	}
-// 	else if ($file == "" || $file == " " || $file == "\n")
-// 	{
-// 		echo "<tr><td>There are no images at this time.</td></tr>";
-// 		break;
-// 	}
-// 	else if ($count == 0)
-// 	{
-// 		echo "<tr>";
-// 	}
-// 	
-// 	echo "<td>";
-// 	
-// 	if ($perm_level > 2)
-// 	{
-// 		echo "
-// 		<form name='delete_photo_form' action='delete_photo.php' method='post' onsubmit='return confirmDelete();'>
-// 			<input type='text' name='fileToDelete' id='fileToDelete' value='" . $file ."' style='display:none;'>
-// 			<button type='submit' class='delete_photo'>Delete</button>
-// 		</form>";
-// 	}
-// 		
-// 	echo "
-// 		<img class='image' src='" . $file . "' alt='gallery image' />
-// 		</td>";
-// 	$count++;
-// 		
-// 	if ($count == 3)
-// 	{
-// 		echo "</tr>";
-// 		$count = 0;
-// 		$row++;
-// 	}
-// }
-// if ($count > 0)
-// {
-// 	echo "</tr>";
-// }
-// fclose($gallery);
-
-
 // Create connection to database
 // code setup borrowed from w3school.com
 $conn = new mysqli("localhost", "root", "root", "filesdb");
@@ -96,6 +41,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find photos to display
 	$sql = "SELECT fid, path, fname, file_type FROM Files, FileType WHERE Files.type_id = FileType.type_id";
 	$result = $conn->query($sql);
 
@@ -114,6 +60,7 @@ else
 	
 				echo "<td>";
 	
+				//if user has permission level of webmaster or adultadmin allow them to delete photos
 				if ($perm_level > 2)
 				{
 					echo "
@@ -136,6 +83,7 @@ else
 			}
 		}
 	
+		//if no photos were found alert the user
 		if ($filled == false)
 		{
 			echo "<tr><td>There are no files at this time.</td><tr>";
@@ -149,6 +97,7 @@ $conn->close();
 echo "</tbody>
 </table>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

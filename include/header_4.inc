@@ -1,3 +1,4 @@
+<!--//header for the pages in the add, delete, edit, and upload folders-->
 <!DOCTYPE html>
 <html>
 <head>

@@ -13,7 +13,7 @@ include("../../include/header_2.inc");
 include("../../include/banner_3.inc");
 include("../../include/navbar_3.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <div id='add_form' class='layer'>
@@ -27,6 +27,7 @@ echo "
 </div>
 <a id='return' href='../badges.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

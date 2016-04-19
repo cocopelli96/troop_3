@@ -15,11 +15,12 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%; float:left;'>Troop Roster</h1>";
 		
+	//if user has adultadmin permissions allow them access to the roster management page
 	if ($perm_level == 4)
 	{
 		echo "<a class='edit_button' href='roster_manage.php'>Manage Roster</a>";
@@ -37,6 +38,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find scouts who are designated as youthes
 	$sql0 = "SELECT Patrol.patrol_id, pname FROM Patrol, Scout WHERE Patrol.patrol_id = Scout.patrol_id GROUP BY patrol_id ORDER BY patrol_id;";
 	$result0 = $conn->query($sql0);
 
@@ -118,6 +120,7 @@ else
 						}
 					}
 	
+					//if no scouts were found alert user
 					if ($filled == false)
 					{
 						echo "<tr><td colspan='6'>There are no scouts at this time.</td><tr>";
@@ -137,6 +140,7 @@ $conn->close();
 
 echo "</div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

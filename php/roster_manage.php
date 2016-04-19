@@ -12,7 +12,7 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%; float:left;'>Roster Manager</h1>
@@ -29,6 +29,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find scouts
 	$sql0 = "SELECT * FROM Patrol ORDER BY patrol_id;";
 	$result0 = $conn->query($sql0);
 
@@ -126,6 +127,7 @@ else
 					}
 				}
 
+				//if no scouts were found alert user
 				if ($filled == false)
 				{
 					echo "<tr><td colspan='8'>There are no scouts at this time.</td><tr>";
@@ -144,6 +146,7 @@ $conn->close();
 
 echo "</div>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

@@ -13,12 +13,13 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <div id='edit_content' class='layer'>
 <h1>Sign Up</h1>";
 
+//determine if the user is able to register for the event
 if (isset($_POST["register"]) and !empty($_POST["register"]))
 {
 	if ($_POST["register"] == "yes")
@@ -99,6 +100,7 @@ echo "
 </div>
 <a id='return' href='events.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

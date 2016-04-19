@@ -1,3 +1,4 @@
+<!--//banner for pages found in the php folder-->
 <div id='banner'>
 	<img id="compass" src="../images/compass.jpeg" alt="compass image" />
 	<h1>Troop 3 Burlington</h1>

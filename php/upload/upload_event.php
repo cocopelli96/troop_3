@@ -12,6 +12,7 @@ include("../../include/header_2.inc");
 include("../../include/banner_3.inc");
 include("../../include/navbar_3.inc");
 
+//main content start
 echo "<div id='main'>
 <div id='add_content' class='layer'>";
 
@@ -39,6 +40,7 @@ else
 		}
 	}
 
+	//upload event
 	$sql = "INSERT INTO Event VALUES(".$event_id.",'".$_POST["event_name"]."','".$_POST["description"]."','".$_POST["location"]."','".substr($_POST["start"],6,4)."-".substr($_POST["start"],0,2)."-".substr($_POST["start"],3,2)." ".substr($_POST["start"],11,8)."','".substr($_POST["end"],6,4). "-".substr($_POST["end"],0,2)."-".substr($_POST["end"],3,2)." " .substr($_POST["end"],11,8)."')";
 	$result = $conn->query($sql);
 	
@@ -61,6 +63,7 @@ else
 			}
 		}
 
+		//upload signup deadline
 		$sql = "INSERT INTO SignUp VALUES(".$count.",'".substr($_POST["deadline"],6,4)."-".substr($_POST["deadline"],0,2)."-".substr($_POST["deadline"],3,2)." ".substr($_POST["deadline"],11,8). "',".$_POST["cost"].",".$event_id.")";
 		$result = $conn->query($sql);
 	
@@ -74,6 +77,7 @@ echo "
 </div>
 <a id='return' href='../events.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

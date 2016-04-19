@@ -15,16 +15,18 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%; float:left;'>Events</h1>";
-		
+	
+	//if user permission level is adult or adultadmin let them add events
 	if ($perm_level == 4 || $perm_level == 2)
 	{
 		echo "<a class='edit_button' href='./add/add_event.php'>Add Event</a>";
 	}
 
+//retireve current month and year as well as month and year for events to be displayed
 if (isset($_POST["year"]) and !empty($_POST["year"]))
 {
 	$year = intval($_POST["year"]);
@@ -58,9 +60,9 @@ if ($month_previous < 1)
 	$month_previous = 12;
 	$year_previous--;
 }
-
 $months = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 
+//create month and year indication and control table
 echo "
 	<table id='date_table' class='table'>
 		<thead>
@@ -98,6 +100,7 @@ if ($conn->connect_error)
 }
 else
 {
+	//find events for selected month and year
 	$sql = "SELECT * FROM Event ORDER BY event_id;";
 	$result = $conn->query($sql);
 
@@ -125,6 +128,8 @@ else
 					<thead>
 						<tr>";
 			
+				//if user has adult permissions allow them to edit events
+				//if user has adultadmin permissions allow them to edit and delete events
 				if ($perm_level == 2)
 				{
 					echo"<td colspan='2'>".$row["event_name"]."</td>
@@ -161,6 +166,7 @@ else
 						<tr>
 							<td>Location:</td>";
 				
+				//find if event has a cost
 				$sql1 = "SELECT * FROM SignUp ORDER BY event_id;";
 				$result1 = $conn->query($sql1);
 
@@ -199,7 +205,8 @@ else
 							<td>Description:</td>
 							<td colspan='2'>".$row["description"]."</td>
 						</tr>";
-						
+					
+				//find if event has a signup dealine and if it has passed
 				$sql1 = "SELECT * FROM SignUp ORDER BY event_id;";
 				$result1 = $conn->query($sql1);
 
@@ -317,7 +324,8 @@ else
 											<button type='submit' class='signup_button'>Sign Up</button>
 										</form>
 									</td>";
-									
+								
+								//if user has adultadmin permissions allow them to check scouts attenting the event
 								if ($perm_level == 4)
 								{
 									echo "<td>
@@ -345,6 +353,7 @@ else
 
 echo "
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");

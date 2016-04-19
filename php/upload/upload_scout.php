@@ -12,6 +12,7 @@ include("../../include/header_2.inc");
 include("../../include/banner_3.inc");
 include("../../include/navbar_3.inc");
 
+//main content start
 echo "<div id='main'>
 <div id='add_content' class='layer'>";
 
@@ -39,6 +40,7 @@ else
 		}
 	}
 
+	//upload scout
 	$sql = "INSERT INTO Scout VALUES(".$sid.",'".$_POST["sfn"]."','".$_POST["sln"]."',".$_POST["patrols"].",".$_POST["leadership"].",".$_POST["rank"].")";
 	$result = $conn->query($sql);
 	
@@ -59,11 +61,13 @@ else
 		}
 	}
 
+	//upload address
 	$sql = "INSERT INTO Address VALUES(".$count.",'".$_POST["street"]."','".$_POST["city"]."','".$_POST["state"]."','" .$_POST["zip"]."',".$sid.")";
 	$result = $conn->query($sql);
 	
 	echo "The address ".$_POST["street"]." ".$_POST["city"].", ".$_POST["state"]." " .$_POST["zip"]." has been uploaded.";
 	
+	//upload contact
 	if (isset($_POST["phone1"]) and !empty($_POST["phone1"]))
 	{
 		$sql = "INSERT INTO scoutcontact VALUES(".$sid.",111,'".$_POST["phone1"]."')";
@@ -72,6 +76,7 @@ else
 		echo "The home phone number ".$_POST["phone1"]." has been uploaded.";
 	}
 	
+	//upload contact
 	if (isset($_POST["phone2"]) and !empty($_POST["phone2"]))
 	{
 		$sql = "INSERT INTO scoutcontact VALUES(".$sid.",222,'".$_POST["phone2"]."')";
@@ -80,6 +85,7 @@ else
 		echo "The cell phone number ".$_POST["phone2"]." has been uploaded.";
 	}
 	
+	//upload contact
 	$sql = "INSERT INTO scoutcontact VALUES(".$sid.",333,'".$_POST["email"]."')";
 	$result = $conn->query($sql);
 	
@@ -92,6 +98,7 @@ echo "
 </div>
 <a id='return' href='../roster_manage.php'>Return</a>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../../include/footer_3.inc");

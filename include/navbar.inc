@@ -1,3 +1,4 @@
+<!--//navigation for the home page-->
 <?php
 
 echo "

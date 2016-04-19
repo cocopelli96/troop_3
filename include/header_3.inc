@@ -1,3 +1,4 @@
+<!--//header for the pages in the php folder-->
 <!DOCTYPE html>
 <html>
 <head>

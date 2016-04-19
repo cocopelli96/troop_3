@@ -1,3 +1,4 @@
+<!--//footer for the pages in the php folder-->
 <div id="footer">
 	<div id="footer_nav">
 		<a href="about.php">About Us</a>

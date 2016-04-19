@@ -16,17 +16,19 @@ include("../include/header_2.inc");
 include("../include/banner_2.inc");
 include("../include/navbar_2.inc");
 
-//main content
+//main content start
 echo "
 <div id='main'>
 <h1 style='width:50%; float: left;'>Downloads</h1>";
 
+//if user has webmaster or adultadmin permissions allow them to add files
 if ($perm_level > 2)
 {
 	echo "
 	<a id='add_file' href='./add/add_file.php'>Add File</a>";
 }
 
+//start table structure
 echo "
 <table id='downloads' class='table'>
 </tbody>";
@@ -40,6 +42,7 @@ if ($conn->connect_error) {
 } 
 else
 {
+	//find downloadable files
 	$sql = "SELECT fid, path, fname, file_type FROM Files, FileType WHERE Files.type_id = FileType.type_id";
 	$result = $conn->query($sql);
 
@@ -74,6 +77,7 @@ else
 			}
 		}
 	
+		//if no files were found alert the user
 		if ($filled == false)
 		{
 			echo "<tr><td>There are no files at this time.</td><tr>";
@@ -84,9 +88,11 @@ else
 }
 $conn->close();
 
+//end table structure
 echo "</tbody>
 </table>
 </div>";
+//main content end
 
 //include footer and closing content
 include("../include/footer_2.inc");
