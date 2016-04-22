@@ -20,11 +20,11 @@ echo "
 <h1>Add Article</h1>
 <form name='upload_artilce' onsubmit='return articleForm();' action='../upload/upload_article.php' method='post' enctype='multipart/form-data'>
 	Article Title:
-    <input type='text' name='articleTitle' id='articleTitle'>
+    <input type='text' name='articleTitle' id='articleTitle' maxlength='45' />
     <br />
     Select file to upload:
-    <input type='file' name='fileToUpload' id='fileToUpload'>
-    <input type='submit' value='Upload File' name='submit'>
+    <input type='file' name='fileToUpload' id='fileToUpload' />
+    <input type='submit' value='Upload File' name='submit' />
 </form>
 </div>
 <a id='return' href='../articles.php'>Return</a>

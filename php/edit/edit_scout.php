@@ -46,7 +46,7 @@ else
 					<label for='sfn'>Scout First Name:</label>
 				</td>
 				<td>
-					<input type='textbox' name='sfn' id='sfn' value='".$row["sfn"]."' />
+					<input type='textbox' name='sfn' id='sfn' value='".$row["sfn"]."' maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -54,7 +54,7 @@ else
 					<label for='sln'>Scout Last Name:</label>
 				</td>
 				<td>
-					<input type='textbox' name='sln' id='sln' value='".$row["sln"]."' />
+					<input type='textbox' name='sln' id='sln' value='".$row["sln"]."' maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -62,7 +62,7 @@ else
 					<label for='street'>Street:</label>
 				</td>
 				<td>
-					<input type='textbox' name='street' id='street' value='".$row["street"]."' />
+					<input type='textbox' name='street' id='street' value='".$row["street"]."' maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -70,7 +70,7 @@ else
 					<label for='city'>City:</label>
 				</td>
 				<td>
-					<input type='textbox' name='city' id='city' value='".$row["city"]."' />
+					<input type='textbox' name='city' id='city' value='".$row["city"]."' maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -78,7 +78,7 @@ else
 					<label for='state'>State:</label>
 				</td>
 				<td>
-					<input type='textbox' name='state' id='state' value='".$row["state"]."' />
+					<input type='textbox' name='state' id='state' value='".$row["state"]."' maxlength='2' />
 				</td>
 			</tr>
 			<tr>
@@ -86,7 +86,7 @@ else
 					<label for='zip'>Zip Code:</label>
 				</td>
 				<td>
-					<input type='textbox' name='zip' id='zip' value='".$row["zip"]."' />
+					<input type='textbox' name='zip' id='zip' value='".$row["zip"]."' maxlength='5' />
 				</td>
 			</tr>
 			<tr>
@@ -107,7 +107,7 @@ else
 			}
 		}
 
-	echo " />
+	echo " maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -128,7 +128,7 @@ else
 			}
 		}
 
-	echo " />
+	echo " maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -149,7 +149,7 @@ else
 			}
 		}
 
-	echo " />
+	echo " maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -242,7 +242,7 @@ else
 			</tr>
 			<tr>
 				<td colspan='2'>
-					<input type='submit' value='Edit Scout' name='submit'>
+					<input type='submit' value='Edit Scout' name='submit' />
 				</td>
 			</tr>
 		</table>";

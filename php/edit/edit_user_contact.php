@@ -58,7 +58,7 @@ else
 						}
 					}
 
-				echo " />
+				echo " maxlength='45' />
 							</td>
 						</tr>
 						<tr>
@@ -78,12 +78,12 @@ else
 						}
 					}
 
-				echo " />
+				echo " maxlength='45' />
 							</td>
 						</tr>
 						<tr>
 							<td colspan='2'>
-								<input type='submit' value='Edit User Contact' name='submit'>
+								<input type='submit' value='Edit User Contact' name='submit' />
 							</td>
 						</tr>
 					</table>";

@@ -46,7 +46,7 @@ else
 							<label for='pass'>Password:</label>
 						</td>
 						<td>
-							<input type='password' name='pass' id='pass' />
+							<input type='password' name='pass' id='pass' maxlength='45' />
 						</td>
 					</tr>
 					<tr>
@@ -54,7 +54,7 @@ else
 							<label for='pass_check'>Confirm Password:</label>
 						</td>
 						<td>
-							<input type='password' name='pass_check' id='pass_check' />
+							<input type='password' name='pass_check' id='pass_check' maxlength='45' />
 						</td>
 					</tr>
 					<tr>

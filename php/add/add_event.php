@@ -25,7 +25,7 @@ echo "
 				<label for='event_name'>Event Name:</label>
 			</td>
 			<td>
-				<input type='textbox' name='event_name' id='event_name' />
+				<input type='textbox' name='event_name' id='event_name' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -33,7 +33,7 @@ echo "
 				<label for='location'>Event Location:</label>
 			</td>
 			<td>
-				<input type='textbox' name='location' id='location' />
+				<input type='textbox' name='location' id='location' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -41,7 +41,7 @@ echo "
 				<label for='description'>Event Description:</label>
 			</td>
 			<td>
-				<textarea name='description' id='description' rows='5' cols='30'></textarea>
+				<textarea name='description' id='description' rows='5' cols='30' maxlength='225'></textarea>
 			</td>
 		</tr>
 		<tr>
@@ -81,7 +81,7 @@ echo "
 		</tr>
     	<tr>
     		<td colspan='2'>
-   				<input type='submit' value='Add Event' name='submit'>
+   				<input type='submit' value='Add Event' name='submit' />
    			</td>
    		</tr>
     </table>

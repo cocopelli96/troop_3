@@ -46,7 +46,7 @@ else
 					<label for='uname'>User Name:</label>
 				</td>
 				<td>
-					<input type='textbox' name='uname' id='uname' value='".$row["uname"]."' />
+					<input type='textbox' name='uname' id='uname' value='".$row["uname"]."' maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -54,7 +54,7 @@ else
 					<label for='pass'>Password:</label>
 				</td>
 				<td>
-					<input type='password' name='pass' id='pass' value='".$row["pass"]."' />
+					<input type='password' name='pass' id='pass' value='".$row["pass"]."' maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -62,7 +62,7 @@ else
 					<label for='pass_check'>Confirm Password:</label>
 				</td>
 				<td>
-					<input type='password' name='pass_check' id='pass_check' value='".$row["pass"]."' />
+					<input type='password' name='pass_check' id='pass_check' value='".$row["pass"]."' maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -83,7 +83,7 @@ else
 			}
 		}
 
-	echo " />
+	echo " maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -104,7 +104,7 @@ else
 			}
 		}
 
-	echo " />
+	echo " maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -195,7 +195,7 @@ else
 	echo "</tr>
 			<tr>
 				<td colspan='2'>
-					<input type='submit' value='Edit User' name='submit'>
+					<input type='submit' value='Edit User' name='submit' />
 				</td>
 			</tr>
 		</table>";

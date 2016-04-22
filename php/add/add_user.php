@@ -25,7 +25,7 @@ echo "
 				<label for='uname'>User Name:</label>
 			</td>
 			<td>
-				<input type='textbox' name='uname' id='uname' />
+				<input type='textbox' name='uname' id='uname' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -33,7 +33,7 @@ echo "
 				<label for='pass'>Password:</label>
 			</td>
 			<td>
-				<input type='password' name='pass' id='pass' />
+				<input type='password' name='pass' id='pass' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -41,7 +41,7 @@ echo "
 				<label for='pass_check'>Confirm Password:</label>
 			</td>
 			<td>
-				<input type='password' name='pass_check' id='pass_check' />
+				<input type='password' name='pass_check' id='pass_check' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -49,7 +49,7 @@ echo "
 				<label for='phone'>User Phone Number:</label>
 			</td>
 			<td>
-				<input type='textbox' name='phone' id='phone' />
+				<input type='textbox' name='phone' id='phone' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -57,7 +57,7 @@ echo "
 				<label for='email'>User Email address:</label>
 			</td>
 			<td>
-				<input type='textbox' name='email' id='email' />
+				<input type='textbox' name='email' id='email' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -129,7 +129,7 @@ echo "
     	</tr>
     	<tr>
     		<td colspan='2'>
-   				<input type='submit' value='Add User' name='submit'>
+   				<input type='submit' value='Add User' name='submit' />
    			</td>
    		</tr>
     </table>

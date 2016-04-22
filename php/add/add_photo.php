@@ -20,8 +20,8 @@ echo "
 <h1>Add Photo</h1>
 <form name='upload_photo' onsubmit='return fileForm();' action='../upload/upload_photo.php' method='post' enctype='multipart/form-data'>
     Select image to upload:
-    <input type='file' name='fileToUpload' id='fileToUpload'>
-    <input type='submit' value='Upload Image' name='submit'>
+    <input type='file' name='fileToUpload' id='fileToUpload' />
+    <input type='submit' value='Upload Image' name='submit' />
 </form>
 </div>
 <a id='return' href='../photos.php'>Return</a>

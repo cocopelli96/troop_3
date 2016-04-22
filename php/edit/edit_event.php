@@ -46,7 +46,7 @@ else
 					<label for='event_name'>Event Name:</label>
 				</td>
 				<td>
-					<input type='textbox' name='event_name' id='event_name' value='".$row["event_name"]."' />
+					<input type='textbox' name='event_name' id='event_name' value='".$row["event_name"]."' maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -54,7 +54,7 @@ else
 					<label for='location'>Event Location:</label>
 				</td>
 				<td>
-					<input type='textbox' name='location' id='location' value='".$row["location"]."' />
+					<input type='textbox' name='location' id='location' value='".$row["location"]."' maxlength='45' />
 				</td>
 			</tr>
 			<tr>
@@ -62,7 +62,7 @@ else
 					<label for='description'>Event Description:</label>
 				</td>
 				<td>
-					<textarea name='description' id='description' rows='5' cols='30'>".$row["description"]."</textarea>
+					<textarea name='description' id='description' rows='5' cols='30' maxlength='225'>".$row["description"]."</textarea>
 				</td>
 			</tr>
 			<tr>
@@ -128,7 +128,7 @@ else
 			</tr>
 			<tr>
 				<td colspan='2'>
-					<input type='submit' value='Edit Event' name='submit'>
+					<input type='submit' value='Edit Event' name='submit' />
 				</td>
 			</tr>
 		</table>";

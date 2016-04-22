@@ -97,7 +97,7 @@ echo "
     	</tr>
     	<tr>
     		<td colspan='3'>
-   				<input type='submit' value='Add Counselor' name='submit'>
+   				<input type='submit' value='Add Counselor' name='submit' />
    			</td>
    		</tr>
     </table>

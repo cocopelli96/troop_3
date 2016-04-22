@@ -20,8 +20,8 @@ echo "
 <h1>Add Patrol</h1>
 <form name='upload_patrol' onsubmit='return patrolForm();' action='../upload/upload_patrol.php' method='post' enctype='multipart/form-data'>
 	<label for='pname'>Patrol Name:</label>
-	<input type='textbox' name='pname' id='pname' />
-	<input type='submit' value='Add Patrol' name='submit'>
+	<input type='textbox' name='pname' id='pname' maxlength='45' />
+	<input type='submit' value='Add Patrol' name='submit' />
 </form>
 </div>
 <a id='return' href='../roster_manage.php'>Return</a>

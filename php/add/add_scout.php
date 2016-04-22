@@ -25,7 +25,7 @@ echo "
 				<label for='sfn'>Scout First Name:</label>
 			</td>
 			<td>
-				<input type='textbox' name='sfn' id='sfn' />
+				<input type='textbox' name='sfn' id='sfn' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -33,7 +33,7 @@ echo "
 				<label for='sln'>Scout Last Name:</label>
 			</td>
 			<td>
-				<input type='textbox' name='sln' id='sln' />
+				<input type='textbox' name='sln' id='sln' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -41,7 +41,7 @@ echo "
 				<label for='street'>Street:</label>
 			</td>
 			<td>
-				<input type='textbox' name='street' id='street' />
+				<input type='textbox' name='street' id='street' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -49,7 +49,7 @@ echo "
 				<label for='city'>City:</label>
 			</td>
 			<td>
-				<input type='textbox' name='city' id='city' />
+				<input type='textbox' name='city' id='city' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -57,7 +57,7 @@ echo "
 				<label for='state'>State:</label>
 			</td>
 			<td>
-				<input type='textbox' name='state' id='state' />
+				<input type='textbox' name='state' id='state' maxlength='2' />
 			</td>
 		</tr>
 		<tr>
@@ -65,7 +65,7 @@ echo "
 				<label for='zip'>Zip Code:</label>
 			</td>
 			<td>
-				<input type='textbox' name='zip' id='zip' />
+				<input type='textbox' name='zip' id='zip' maxlength='5' />
 			</td>
 		</tr>
 		<tr>
@@ -73,7 +73,7 @@ echo "
 				<label for='phone1'>Home Phone Number:</label>
 			</td>
 			<td>
-				<input type='textbox' name='phone1' id='phone1' />
+				<input type='textbox' name='phone1' id='phone1' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -81,7 +81,7 @@ echo "
 				<label for='phone2'>Cell Phone Number:</label>
 			</td>
 			<td>
-				<input type='textbox' name='phone2' id='phone2' />
+				<input type='textbox' name='phone2' id='phone2' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -89,7 +89,7 @@ echo "
 				<label for='email'>Email address:</label>
 			</td>
 			<td>
-				<input type='textbox' name='email' id='email' />
+				<input type='textbox' name='email' id='email' maxlength='45' />
 			</td>
 		</tr>
 		<tr>
@@ -194,7 +194,7 @@ echo "
     	</tr>
     	<tr>
     		<td colspan='2'>
-   				<input type='submit' value='Add Scout' name='submit'>
+   				<input type='submit' value='Add Scout' name='submit' />
    			</td>
    		</tr>
     </table>

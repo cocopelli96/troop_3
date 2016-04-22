@@ -20,9 +20,9 @@ echo "
 <h1>Add Merit Badge</h1>
 <form name='upload_badge' onsubmit='return badgeForm();' action='../upload/upload_badge.php' method='post' enctype='multipart/form-data'>
 	Badge Title:
-    <input type='text' name='badgeTitle' id='badgeTitle'>
+    <input type='text' name='badgeTitle' id='badgeTitle' maxlength='45' />
     <br />
-    <input type='submit' value='Add Badge' name='submit'>
+    <input type='submit' value='Add Badge' name='submit' />
 </form>
 </div>
 <a id='return' href='../badges.php'>Return</a>
